@@ -1,0 +1,373 @@
+{
+  "data": {
+    "tournament": {
+      "id": 846535,
+      "name": "Smash Frontier: Farm Edition",
+      "city": "Santander",
+      "addrState": "CB",
+      "countryCode": "ES",
+      "venueName": null,
+      "venueAddress": "C. Floranes, 23, 39010 Santander, Cantabria, España",
+      "startAt": 1762556400,
+      "endAt": 1762621200,
+      "url": "/tournament/smash-frontier-farm-edition",
+      "events": [
+        {
+          "id": 1493835,
+          "name": "Melee 1v1",
+          "slug": "tournament/smash-frontier-farm-edition/event/melee-1v1",
+          "numEntrants": 10,
+          "videoGame": {
+            "id": 1386,
+            "name": "Super Smash Bros. Ultimate"
+          },
+          "standings": {
+            "pageInfo": {
+              "total": 10,
+              "totalPages": 1,
+              "page": 1,
+              "perPage": 512
+            },
+            "nodes": [
+              {
+                "placement": 7,
+                "entrant": {
+                  "id": 21779752,
+                  "name": "OFC | Saihara",
+                  "participants": [
+                    {
+                      "id": 20012321,
+                      "gamerTag": "Saihara"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 7,
+                "entrant": {
+                  "id": 21737425,
+                  "name": "chatu",
+                  "participants": [
+                    {
+                      "id": 19970880,
+                      "gamerTag": "chatu"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 9,
+                "entrant": {
+                  "id": 21770017,
+                  "name": "EnzoAR",
+                  "participants": [
+                    {
+                      "id": 20002819,
+                      "gamerTag": "EnzoAR"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 9,
+                "entrant": {
+                  "id": 21774633,
+                  "name": "Rolox",
+                  "participants": [
+                    {
+                      "id": 20007518,
+                      "gamerTag": "Rolox"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 9,
+                "entrant": {
+                  "id": 21717050,
+                  "name": "LT | Zerø",
+                  "participants": [
+                    {
+                      "id": 19951757,
+                      "gamerTag": "Zerø"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 9,
+                "entrant": {
+                  "id": 21802769,
+                  "name": "Th3Pingu3",
+                  "participants": [
+                    {
+                      "id": 20024598,
+                      "gamerTag": "Th3Pingu3"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 9,
+                "entrant": {
+                  "id": 21717016,
+                  "name": "MRB | Narvex",
+                  "participants": [
+                    {
+                      "id": 19951726,
+                      "gamerTag": "Narvex"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 9,
+                "entrant": {
+                  "id": 21757637,
+                  "name": "Tormen",
+                  "participants": [
+                    {
+                      "id": 19990921,
+                      "gamerTag": "Tormen"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 9,
+                "entrant": {
+                  "id": 21737152,
+                  "name": "<3 | Diexter",
+                  "participants": [
+                    {
+                      "id": 19970596,
+                      "gamerTag": "Diexter"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 9,
+                "entrant": {
+                  "id": 21741229,
+                  "name": "Adryx",
+                  "participants": [
+                    {
+                      "id": 19974606,
+                      "gamerTag": "Adryx"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": 1493833,
+          "name": "Singles 1vs1",
+          "slug": "tournament/smash-frontier-farm-edition/event/singles-1vs1",
+          "numEntrants": 13,
+          "videoGame": {
+            "id": 1386,
+            "name": "Super Smash Bros. Ultimate"
+          },
+          "standings": {
+            "pageInfo": {
+              "total": 13,
+              "totalPages": 1,
+              "page": 1,
+              "perPage": 512
+            },
+            "nodes": [
+              {
+                "placement": 1,
+                "entrant": {
+                  "id": 21758592,
+                  "name": "El Juancho",
+                  "participants": [
+                    {
+                      "id": 19991888,
+                      "gamerTag": "El Juancho"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 2,
+                "entrant": {
+                  "id": 21779751,
+                  "name": "OFC | Saihara",
+                  "participants": [
+                    {
+                      "id": 20012321,
+                      "gamerTag": "Saihara"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 3,
+                "entrant": {
+                  "id": 21757636,
+                  "name": "Tormen",
+                  "participants": [
+                    {
+                      "id": 19990921,
+                      "gamerTag": "Tormen"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 4,
+                "entrant": {
+                  "id": 21737151,
+                  "name": "<3 | Diexter",
+                  "participants": [
+                    {
+                      "id": 19970596,
+                      "gamerTag": "Diexter"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 5,
+                "entrant": {
+                  "id": 21737424,
+                  "name": "chatu",
+                  "participants": [
+                    {
+                      "id": 19970880,
+                      "gamerTag": "chatu"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 5,
+                "entrant": {
+                  "id": 21717015,
+                  "name": "MRB | Narvex",
+                  "participants": [
+                    {
+                      "id": 19951726,
+                      "gamerTag": "Narvex"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 7,
+                "entrant": {
+                  "id": 21802768,
+                  "name": "Th3Pingu3",
+                  "participants": [
+                    {
+                      "id": 20024598,
+                      "gamerTag": "Th3Pingu3"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 7,
+                "entrant": {
+                  "id": 21717049,
+                  "name": "LT | Zerø",
+                  "participants": [
+                    {
+                      "id": 19951757,
+                      "gamerTag": "Zerø"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 9,
+                "entrant": {
+                  "id": 21770016,
+                  "name": "EnzoAR",
+                  "participants": [
+                    {
+                      "id": 20002819,
+                      "gamerTag": "EnzoAR"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 9,
+                "entrant": {
+                  "id": 21741228,
+                  "name": "Adryx",
+                  "participants": [
+                    {
+                      "id": 19974606,
+                      "gamerTag": "Adryx"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 9,
+                "entrant": {
+                  "id": 21774632,
+                  "name": "Rolox",
+                  "participants": [
+                    {
+                      "id": 20007518,
+                      "gamerTag": "Rolox"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 9,
+                "entrant": {
+                  "id": 21802925,
+                  "name": "Ruben04",
+                  "participants": [
+                    {
+                      "id": 20035312,
+                      "gamerTag": "Ruben04"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 13,
+                "entrant": {
+                  "id": 21760242,
+                  "name": "4N6ELUS",
+                  "participants": [
+                    {
+                      "id": 19993490,
+                      "gamerTag": "4N6ELUS"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "extensions": {
+    "cacheControl": {
+      "version": 1,
+      "hints": [
+        {
+          "path": [
+            "tournament"
+          ],
+          "maxAge": 300,
+          "scope": "PRIVATE"
+        }
+      ]
+    },
+    "queryComplexity": 77
+  },
+  "actionRecords": []
+}

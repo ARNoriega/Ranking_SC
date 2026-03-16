@@ -1,0 +1,568 @@
+{
+  "data": {
+    "tournament": {
+      "id": 704307,
+      "name": "Castle of Doom 11",
+      "city": "Santander",
+      "addrState": "CB",
+      "countryCode": "ES",
+      "venueName": null,
+      "venueAddress": "C. Floranes, 23, 39010 Santander, Cantabria, España",
+      "startAt": 1727560800,
+      "endAt": 1727564040,
+      "url": "/tournament/castle-of-doom-11",
+      "events": [
+        {
+          "id": 1206032,
+          "name": "I'm too young to die",
+          "slug": "tournament/castle-of-doom-11/event/i-m-too-young-to-die",
+          "numEntrants": 23,
+          "videoGame": {
+            "id": 1386,
+            "name": "Super Smash Bros. Ultimate"
+          },
+          "standings": {
+            "pageInfo": {
+              "total": 15,
+              "totalPages": 1,
+              "page": 1,
+              "perPage": 512
+            },
+            "nodes": [
+              {
+                "placement": 1,
+                "entrant": {
+                  "id": 17846553,
+                  "name": "RHM/La bestia | Mask",
+                  "participants": [
+                    {
+                      "id": 16527740,
+                      "gamerTag": "Mask"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 2,
+                "entrant": {
+                  "id": 17841327,
+                  "name": "Ale | Diexter",
+                  "participants": [
+                    {
+                      "id": 16523330,
+                      "gamerTag": "Diexter"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 3,
+                "entrant": {
+                  "id": 17704731,
+                  "name": "Archer | Frewe10",
+                  "participants": [
+                    {
+                      "id": 16409779,
+                      "gamerTag": "Frewe10"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 4,
+                "entrant": {
+                  "id": 17944553,
+                  "name": "Nyco_Baez | Nycolast",
+                  "participants": [
+                    {
+                      "id": 16614297,
+                      "gamerTag": "Nycolast"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 5,
+                "entrant": {
+                  "id": 17941358,
+                  "name": "EnzoAR",
+                  "participants": [
+                    {
+                      "id": 16611607,
+                      "gamerTag": "EnzoAR"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 5,
+                "entrant": {
+                  "id": 17945203,
+                  "name": "GoldenWind",
+                  "participants": [
+                    {
+                      "id": 16614836,
+                      "gamerTag": "GoldenWind"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 7,
+                "entrant": {
+                  "id": 17941575,
+                  "name": "BAKUS | Maigar",
+                  "participants": [
+                    {
+                      "id": 16611806,
+                      "gamerTag": "Maigar"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 7,
+                "entrant": {
+                  "id": 17775157,
+                  "name": "Pichuru",
+                  "participants": [
+                    {
+                      "id": 16469424,
+                      "gamerTag": "Pichuru"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 9,
+                "entrant": {
+                  "id": 17885765,
+                  "name": "Soy | El jodido",
+                  "participants": [
+                    {
+                      "id": 16561607,
+                      "gamerTag": "El jodido"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 9,
+                "entrant": {
+                  "id": 17955920,
+                  "name": "Hakko",
+                  "participants": [
+                    {
+                      "id": 16623328,
+                      "gamerTag": "Hakko"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 9,
+                "entrant": {
+                  "id": 17775125,
+                  "name": "Bafu",
+                  "participants": [
+                    {
+                      "id": 16469394,
+                      "gamerTag": "Bafu"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 9,
+                "entrant": {
+                  "id": 17902714,
+                  "name": "Idk | Adryx",
+                  "participants": [
+                    {
+                      "id": 16576597,
+                      "gamerTag": "Adryx"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 13,
+                "entrant": {
+                  "id": 17815253,
+                  "name": "ElBromas05",
+                  "participants": [
+                    {
+                      "id": 16501857,
+                      "gamerTag": "ElBromas05"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 13,
+                "entrant": {
+                  "id": 17708163,
+                  "name": "Gzuto",
+                  "participants": [
+                    {
+                      "id": 16412866,
+                      "gamerTag": "Gzuto"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 13,
+                "entrant": {
+                  "id": 17898304,
+                  "name": "Arbes",
+                  "participants": [
+                    {
+                      "id": 16572257,
+                      "gamerTag": "Arbes"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": 1206031,
+          "name": "Singles 1vs1",
+          "slug": "tournament/castle-of-doom-11/event/singles-1vs1",
+          "numEntrants": 23,
+          "videoGame": {
+            "id": 1386,
+            "name": "Super Smash Bros. Ultimate"
+          },
+          "standings": {
+            "pageInfo": {
+              "total": 23,
+              "totalPages": 1,
+              "page": 1,
+              "perPage": 512
+            },
+            "nodes": [
+              {
+                "placement": 1,
+                "entrant": {
+                  "id": 17890745,
+                  "name": "STO | ANGEL DUST///",
+                  "participants": [
+                    {
+                      "id": 16565652,
+                      "gamerTag": "ANGEL DUST///"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 2,
+                "entrant": {
+                  "id": 17747725,
+                  "name": "JorgitoPredator",
+                  "participants": [
+                    {
+                      "id": 16446322,
+                      "gamerTag": "JorgitoPredator"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 3,
+                "entrant": {
+                  "id": 17957485,
+                  "name": "HaloMexico | DrWilty",
+                  "participants": [
+                    {
+                      "id": 16623153,
+                      "gamerTag": "DrWilty"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 4,
+                "entrant": {
+                  "id": 17924100,
+                  "name": "MKT | Golo",
+                  "participants": [
+                    {
+                      "id": 16596349,
+                      "gamerTag": "Golo"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 5,
+                "entrant": {
+                  "id": 17687105,
+                  "name": "Dalvila",
+                  "participants": [
+                    {
+                      "id": 16393916,
+                      "gamerTag": "Dalvila"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 5,
+                "entrant": {
+                  "id": 17841345,
+                  "name": "GG | | Saviir",
+                  "participants": [
+                    {
+                      "id": 16523346,
+                      "gamerTag": "Saviir"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 7,
+                "entrant": {
+                  "id": 17687919,
+                  "name": "MRB | Narvex",
+                  "participants": [
+                    {
+                      "id": 16394556,
+                      "gamerTag": "Narvex"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 7,
+                "entrant": {
+                  "id": 17704721,
+                  "name": "Swamp",
+                  "participants": [
+                    {
+                      "id": 16409772,
+                      "gamerTag": "Swamp"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 9,
+                "entrant": {
+                  "id": 17941359,
+                  "name": "EnzoAR",
+                  "participants": [
+                    {
+                      "id": 16611607,
+                      "gamerTag": "EnzoAR"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 9,
+                "entrant": {
+                  "id": 17841326,
+                  "name": "Ale | Diexter",
+                  "participants": [
+                    {
+                      "id": 16523330,
+                      "gamerTag": "Diexter"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 9,
+                "entrant": {
+                  "id": 17902713,
+                  "name": "Idk | Adryx",
+                  "participants": [
+                    {
+                      "id": 16576597,
+                      "gamerTag": "Adryx"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 9,
+                "entrant": {
+                  "id": 17846552,
+                  "name": "RHM/La bestia | Mask",
+                  "participants": [
+                    {
+                      "id": 16527740,
+                      "gamerTag": "Mask"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 13,
+                "entrant": {
+                  "id": 17944554,
+                  "name": "Nyco_Baez | Nycolast",
+                  "participants": [
+                    {
+                      "id": 16614297,
+                      "gamerTag": "Nycolast"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 13,
+                "entrant": {
+                  "id": 17945204,
+                  "name": "GoldenWind",
+                  "participants": [
+                    {
+                      "id": 16614836,
+                      "gamerTag": "GoldenWind"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 13,
+                "entrant": {
+                  "id": 17704730,
+                  "name": "Archer | Frewe10",
+                  "participants": [
+                    {
+                      "id": 16409779,
+                      "gamerTag": "Frewe10"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 13,
+                "entrant": {
+                  "id": 17955921,
+                  "name": "Hakko",
+                  "participants": [
+                    {
+                      "id": 16623328,
+                      "gamerTag": "Hakko"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 17,
+                "entrant": {
+                  "id": 17775156,
+                  "name": "Pichuru",
+                  "participants": [
+                    {
+                      "id": 16469424,
+                      "gamerTag": "Pichuru"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 17,
+                "entrant": {
+                  "id": 17815252,
+                  "name": "ElBromas05",
+                  "participants": [
+                    {
+                      "id": 16501857,
+                      "gamerTag": "ElBromas05"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 17,
+                "entrant": {
+                  "id": 17898303,
+                  "name": "Arbes",
+                  "participants": [
+                    {
+                      "id": 16572257,
+                      "gamerTag": "Arbes"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 17,
+                "entrant": {
+                  "id": 17708162,
+                  "name": "Gzuto",
+                  "participants": [
+                    {
+                      "id": 16412866,
+                      "gamerTag": "Gzuto"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 17,
+                "entrant": {
+                  "id": 17941576,
+                  "name": "BAKUS | Maigar",
+                  "participants": [
+                    {
+                      "id": 16611806,
+                      "gamerTag": "Maigar"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 17,
+                "entrant": {
+                  "id": 17885764,
+                  "name": "Soy | El jodido",
+                  "participants": [
+                    {
+                      "id": 16561607,
+                      "gamerTag": "El jodido"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 17,
+                "entrant": {
+                  "id": 17775124,
+                  "name": "Bafu",
+                  "participants": [
+                    {
+                      "id": 16469394,
+                      "gamerTag": "Bafu"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "extensions": {
+    "cacheControl": {
+      "version": 1,
+      "hints": [
+        {
+          "path": [
+            "tournament"
+          ],
+          "maxAge": 300,
+          "scope": "PRIVATE"
+        }
+      ]
+    },
+    "queryComplexity": 122
+  },
+  "actionRecords": []
+}

@@ -1,0 +1,210 @@
+{
+  "data": {
+    "tournament": {
+      "id": 723956,
+      "name": "Maliaño Kart: Copa Trifuerza",
+      "city": "Camargo",
+      "addrState": "CB",
+      "countryCode": "ES",
+      "venueName": null,
+      "venueAddress": "Parque de Cros, Unnamed Road, 39600, 39600 Camargo, Cantabria, España",
+      "startAt": 1731193200,
+      "endAt": 1731261600,
+      "url": "/tournament/malia-o-kart-copa-trifuerza",
+      "events": [
+        {
+          "id": 1244994,
+          "name": "Circuito principal",
+          "slug": "tournament/malia-o-kart-copa-trifuerza/event/circuito-principal",
+          "numEntrants": 12,
+          "videoGame": {
+            "id": 1386,
+            "name": "Super Smash Bros. Ultimate"
+          },
+          "standings": {
+            "pageInfo": {
+              "total": 12,
+              "totalPages": 1,
+              "page": 1,
+              "perPage": 512
+            },
+            "nodes": [
+              {
+                "placement": 1,
+                "entrant": {
+                  "id": 18322209,
+                  "name": "Tormen",
+                  "participants": [
+                    {
+                      "id": 16930966,
+                      "gamerTag": "Tormen"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 2,
+                "entrant": {
+                  "id": 18332662,
+                  "name": "JorgitoPredator",
+                  "participants": [
+                    {
+                      "id": 16940099,
+                      "gamerTag": "JorgitoPredator"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 3,
+                "entrant": {
+                  "id": 18322054,
+                  "name": "MRB | Narvex",
+                  "participants": [
+                    {
+                      "id": 16930832,
+                      "gamerTag": "Narvex"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 4,
+                "entrant": {
+                  "id": 18322224,
+                  "name": "RHM/La bestia | Mask",
+                  "participants": [
+                    {
+                      "id": 16930977,
+                      "gamerTag": "Mask"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 5,
+                "entrant": {
+                  "id": 18332652,
+                  "name": "BBC  | Nycolast",
+                  "participants": [
+                    {
+                      "id": 16940090,
+                      "gamerTag": "Nycolast"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 5,
+                "entrant": {
+                  "id": 18283759,
+                  "name": "Dalvila",
+                  "participants": [
+                    {
+                      "id": 16899049,
+                      "gamerTag": "Dalvila"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 7,
+                "entrant": {
+                  "id": 18332738,
+                  "name": "Soy | El jodido",
+                  "participants": [
+                    {
+                      "id": 16940162,
+                      "gamerTag": "El jodido"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 7,
+                "entrant": {
+                  "id": 18352516,
+                  "name": "EQTMAMQNN | Sombreitor",
+                  "participants": [
+                    {
+                      "id": 16957195,
+                      "gamerTag": "Sombreitor"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 9,
+                "entrant": {
+                  "id": 18343200,
+                  "name": "EnzoAR",
+                  "participants": [
+                    {
+                      "id": 16949251,
+                      "gamerTag": "EnzoAR"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 9,
+                "entrant": {
+                  "id": 18364381,
+                  "name": "ElBromas05",
+                  "participants": [
+                    {
+                      "id": 16967322,
+                      "gamerTag": "ElBromas05"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 9,
+                "entrant": {
+                  "id": 18265727,
+                  "name": "Pac-Land | Frewe10",
+                  "participants": [
+                    {
+                      "id": 16883941,
+                      "gamerTag": "Frewe10"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 9,
+                "entrant": {
+                  "id": 18363341,
+                  "name": "psb | Jelly",
+                  "participants": [
+                    {
+                      "id": 16966432,
+                      "gamerTag": "Jelly"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "extensions": {
+    "cacheControl": {
+      "version": 1,
+      "hints": [
+        {
+          "path": [
+            "tournament"
+          ],
+          "maxAge": 300,
+          "scope": "PRIVATE"
+        }
+      ]
+    },
+    "queryComplexity": 41
+  },
+  "actionRecords": []
+}

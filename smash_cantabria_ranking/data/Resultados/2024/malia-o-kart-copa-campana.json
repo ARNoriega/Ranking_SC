@@ -1,0 +1,184 @@
+{
+  "data": {
+    "tournament": {
+      "id": 730540,
+      "name": "Maliaño Kart: Copa campana",
+      "city": "Camargo",
+      "addrState": "CB",
+      "countryCode": "ES",
+      "venueName": null,
+      "venueAddress": "Parque de Cros, Unnamed Road, 39600, 39600 Camargo, Cantabria, España",
+      "startAt": 1733612400,
+      "endAt": 1733684400,
+      "url": "/tournament/malia-o-kart-copa-campana",
+      "events": [
+        {
+          "id": 1258488,
+          "name": "Circuito principal",
+          "slug": "tournament/malia-o-kart-copa-campana/event/circuito-principal",
+          "numEntrants": 10,
+          "videoGame": {
+            "id": 1386,
+            "name": "Super Smash Bros. Ultimate"
+          },
+          "standings": {
+            "pageInfo": {
+              "total": 10,
+              "totalPages": 1,
+              "page": 1,
+              "perPage": 512
+            },
+            "nodes": [
+              {
+                "placement": 1,
+                "entrant": {
+                  "id": 18591459,
+                  "name": "Dalvila",
+                  "participants": [
+                    {
+                      "id": 17166343,
+                      "gamerTag": "Dalvila"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 2,
+                "entrant": {
+                  "id": 18547832,
+                  "name": "GG | | Saviir",
+                  "participants": [
+                    {
+                      "id": 17126260,
+                      "gamerTag": "Saviir"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 3,
+                "entrant": {
+                  "id": 18547849,
+                  "name": "MRB | Narvex",
+                  "participants": [
+                    {
+                      "id": 16999008,
+                      "gamerTag": "Narvex"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 4,
+                "entrant": {
+                  "id": 18601098,
+                  "name": "Splash | Adryx",
+                  "participants": [
+                    {
+                      "id": 17174890,
+                      "gamerTag": "Adryx"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 5,
+                "entrant": {
+                  "id": 18590200,
+                  "name": "RHM/La bestia | Mask",
+                  "participants": [
+                    {
+                      "id": 17165216,
+                      "gamerTag": "Mask"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 5,
+                "entrant": {
+                  "id": 18547993,
+                  "name": "Pac-Land | Frewe10",
+                  "participants": [
+                    {
+                      "id": 17126398,
+                      "gamerTag": "Frewe10"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 7,
+                "entrant": {
+                  "id": 18599417,
+                  "name": "Gigantomachia | Nycolast",
+                  "participants": [
+                    {
+                      "id": 17173343,
+                      "gamerTag": "Nycolast"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 7,
+                "entrant": {
+                  "id": 18584332,
+                  "name": "EQTMAMQNN | Sombreitor",
+                  "participants": [
+                    {
+                      "id": 17160115,
+                      "gamerTag": "Sombreitor"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 9,
+                "entrant": {
+                  "id": 18582453,
+                  "name": "Soy | El jodido",
+                  "participants": [
+                    {
+                      "id": 17158350,
+                      "gamerTag": "El jodido"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 9,
+                "entrant": {
+                  "id": 18593490,
+                  "name": "Rex Kirai",
+                  "participants": [
+                    {
+                      "id": 17168202,
+                      "gamerTag": "Rex Kirai"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "extensions": {
+    "cacheControl": {
+      "version": 1,
+      "hints": [
+        {
+          "path": [
+            "tournament"
+          ],
+          "maxAge": 300,
+          "scope": "PRIVATE"
+        }
+      ]
+    },
+    "queryComplexity": 35
+  },
+  "actionRecords": []
+}

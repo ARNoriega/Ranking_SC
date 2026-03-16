@@ -1,0 +1,226 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1516pt" height="762pt" viewBox="0.00 0.00 1516.00 762.00">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 757.8)">
+<title>SmashRanking</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-757.8 1511.5,-757.8 1511.5,4 -4,4"/>
+<!-- Player -->
+<g id="node1" class="node">
+<title>Player</title>
+<polygon fill="none" stroke="black" points="1302.5,-445.9 1302.5,-501.1 1503.83,-501.1 1503.83,-445.9 1302.5,-445.9"/>
+<text xml:space="preserve" text-anchor="middle" x="1339.69" y="-470.2" font-family="Helvetica,sans-Serif" font-size="11.00">Player</text>
+<polyline fill="none" stroke="black" points="1376.88,-445.9 1376.88,-501.1"/>
+<text xml:space="preserve" text-anchor="start" x="1398.48" y="-470.2" font-family="Helvetica,sans-Serif" font-size="11.00">- gamer_tag: str </text>
+</g>
+<!-- SetResult -->
+<g id="node2" class="node">
+<title>SetResult</title>
+<polygon fill="none" stroke="black" points="1298.82,-304.3 1298.82,-372.7 1507.5,-372.7 1507.5,-304.3 1298.82,-304.3"/>
+<text xml:space="preserve" text-anchor="middle" x="1344.27" y="-335.2" font-family="Helvetica,sans-Serif" font-size="11.00">SetResult</text>
+<polyline fill="none" stroke="black" points="1389.71,-304.3 1389.71,-372.7"/>
+<text xml:space="preserve" text-anchor="start" x="1411.31" y="-348.4" font-family="Helvetica,sans-Serif" font-size="11.00">- winner_id: int </text>
+<text xml:space="preserve" text-anchor="start" x="1411.31" y="-335.2" font-family="Helvetica,sans-Serif" font-size="11.00"> - loser_id: int </text>
+<text xml:space="preserve" text-anchor="start" x="1411.31" y="-322" font-family="Helvetica,sans-Serif" font-size="11.00"> - score: str </text>
+</g>
+<!-- TorneoNormalizado -->
+<g id="node3" class="node">
+<title>TorneoNormalizado</title>
+<polygon fill="none" stroke="black" points="933.22,-359.1 933.22,-453.9 1242.76,-453.9 1242.76,-359.1 933.22,-359.1"/>
+<text xml:space="preserve" text-anchor="middle" x="1003.12" y="-403.2" font-family="Helvetica,sans-Serif" font-size="11.00">TorneoNormalizado</text>
+<polyline fill="none" stroke="black" points="1073.02,-359.1 1073.02,-453.9"/>
+<text xml:space="preserve" text-anchor="start" x="1094.62" y="-429.6" font-family="Helvetica,sans-Serif" font-size="11.00">- fecha: date </text>
+<text xml:space="preserve" text-anchor="start" x="1094.62" y="-416.4" font-family="Helvetica,sans-Serif" font-size="11.00"> - nombre: str </text>
+<text xml:space="preserve" text-anchor="start" x="1094.62" y="-403.2" font-family="Helvetica,sans-Serif" font-size="11.00"> - entrants: List[Player] </text>
+<text xml:space="preserve" text-anchor="start" x="1094.62" y="-390" font-family="Helvetica,sans-Serif" font-size="11.00"> - sets: List[SetResult] </text>
+<text xml:space="preserve" text-anchor="start" x="1094.62" y="-376.8" font-family="Helvetica,sans-Serif" font-size="11.00"> - placements: Dict[int,int] </text>
+</g>
+<!-- TorneoNormalizado&#45;&gt;Player -->
+<g id="edge12" class="edge">
+<title>TorneoNormalizado-&gt;Player</title>
+<path fill="none" stroke="black" d="M1242.81,-449.9C1242.81,-449.9 1292.91,-449.9 1292.91,-449.9"/>
+<polygon fill="none" stroke="black" points="1293.06,-449.9 1297.26,-447.1 1301.46,-449.9 1297.26,-452.7 1293.06,-449.9"/>
+<text xml:space="preserve" text-anchor="middle" x="1273.32" y="-476.5" font-family="Helvetica,sans-Serif" font-size="10.00">1..*</text>
+</g>
+<!-- TorneoNormalizado&#45;&gt;SetResult -->
+<g id="edge13" class="edge">
+<title>TorneoNormalizado-&gt;SetResult</title>
+<path fill="none" stroke="black" d="M1242.81,-365.9C1242.81,-365.9 1288.94,-365.9 1288.94,-365.9"/>
+<polygon fill="none" stroke="black" points="1289.1,-365.9 1293.3,-363.1 1297.5,-365.9 1293.3,-368.7 1289.1,-365.9"/>
+<text xml:space="preserve" text-anchor="middle" x="1273.32" y="-341.5" font-family="Helvetica,sans-Serif" font-size="10.00">1..*</text>
+</g>
+<!-- RankingEntry -->
+<g id="node4" class="node">
+<title>RankingEntry</title>
+<polygon fill="none" stroke="black" points="959.2,-671.7 959.2,-753.3 1216.78,-753.3 1216.78,-671.7 959.2,-671.7"/>
+<text xml:space="preserve" text-anchor="middle" x="1013.82" y="-709.2" font-family="Helvetica,sans-Serif" font-size="11.00">RankingEntry</text>
+<polyline fill="none" stroke="black" points="1068.43,-671.7 1068.43,-753.3"/>
+<text xml:space="preserve" text-anchor="start" x="1090.03" y="-729" font-family="Helvetica,sans-Serif" font-size="11.00">- player: Player </text>
+<text xml:space="preserve" text-anchor="start" x="1090.03" y="-715.8" font-family="Helvetica,sans-Serif" font-size="11.00"> - score_total_raw: float </text>
+<text xml:space="preserve" text-anchor="start" x="1090.03" y="-702.6" font-family="Helvetica,sans-Serif" font-size="11.00"> - score_total_normalized: float | None </text>
+<text xml:space="preserve" text-anchor="start" x="1090.03" y="-689.4" font-family="Helvetica,sans-Serif" font-size="11.00"> - score_results_raw/normalized: float | None </text>
+<text xml:space="preserve" text-anchor="start" x="1090.03" y="-676.2" font-family="Helvetica,sans-Serif" font-size="11.00"> - score_h2h_raw/normalized: float | None </text>
+</g>
+<!-- RankingTable -->
+<g id="node5" class="node">
+<title>RankingTable</title>
+<polygon fill="none" stroke="black" points="487.04,-708.5 487.04,-750.5 779.48,-750.5 779.48,-708.5 487.04,-708.5"/>
+<text xml:space="preserve" text-anchor="middle" x="542.57" y="-726.2" font-family="Helvetica,sans-Serif" font-size="11.00">RankingTable</text>
+<polyline fill="none" stroke="black" points="598.11,-708.5 598.11,-750.5"/>
+<text xml:space="preserve" text-anchor="start" x="619.71" y="-726.2" font-family="Helvetica,sans-Serif" font-size="11.00">- entries: List[RankingEntry] </text>
+</g>
+<!-- RankingTable&#45;&gt;RankingEntry -->
+<g id="edge11" class="edge">
+<title>RankingTable-&gt;RankingEntry</title>
+<path fill="none" stroke="black" d="M779.95,-729.5C779.95,-729.5 949.47,-729.5 949.47,-729.5"/>
+<polygon fill="none" stroke="black" points="949.63,-729.5 953.83,-726.7 958.03,-729.5 953.83,-732.3 949.63,-729.5"/>
+<text xml:space="preserve" text-anchor="middle" x="881.26" y="-732.5" font-family="Helvetica,sans-Serif" font-size="10.00">1..*</text>
+</g>
+<!-- Readers -->
+<g id="node6" class="node">
+<title>Readers</title>
+<polygon fill="none" stroke="black" points="945.29,-244.5 945.29,-286.5 1230.69,-286.5 1230.69,-244.5 945.29,-244.5"/>
+<text xml:space="preserve" text-anchor="middle" x="992.87" y="-262.2" font-family="Helvetica,sans-Serif" font-size="11.00">readers.py</text>
+<polyline fill="none" stroke="black" points="1040.46,-244.5 1040.46,-286.5"/>
+<text xml:space="preserve" text-anchor="start" x="1062.06" y="-262.2" font-family="Helvetica,sans-Serif" font-size="11.00">+ read_json(path): dict </text>
+</g>
+<!-- Validators -->
+<g id="node7" class="node">
+<title>Validators</title>
+<polygon fill="none" stroke="black" points="957.51,-115.9 957.51,-171.1 1218.47,-171.1 1218.47,-115.9 957.51,-115.9"/>
+<text xml:space="preserve" text-anchor="middle" x="1009.98" y="-140.2" font-family="Helvetica,sans-Serif" font-size="11.00">validators.py</text>
+<polyline fill="none" stroke="black" points="1062.46,-115.9 1062.46,-171.1"/>
+<text xml:space="preserve" text-anchor="start" x="1084.06" y="-146.8" font-family="Helvetica,sans-Serif" font-size="11.00">+ validate_entrants(df) </text>
+<text xml:space="preserve" text-anchor="start" x="1084.06" y="-133.6" font-family="Helvetica,sans-Serif" font-size="11.00"> + validate_bracket(df) </text>
+</g>
+<!-- Scoring -->
+<g id="node8" class="node">
+<title>Scoring</title>
+<polygon fill="none" stroke="black" points="484.74,-464.7 484.74,-546.3 781.77,-546.3 781.77,-464.7 484.74,-464.7"/>
+<text xml:space="preserve" text-anchor="middle" x="531.41" y="-502.2" font-family="Helvetica,sans-Serif" font-size="11.00">scoring.py</text>
+<polyline fill="none" stroke="black" points="578.08,-464.7 578.08,-546.3"/>
+<text xml:space="preserve" text-anchor="start" x="599.68" y="-522" font-family="Helvetica,sans-Serif" font-size="11.00">+ calcular_puntos(torneos) </text>
+<text xml:space="preserve" text-anchor="start" x="599.68" y="-508.8" font-family="Helvetica,sans-Serif" font-size="11.00"> + seleccionar_mejores(jugador) </text>
+<text xml:space="preserve" text-anchor="start" x="599.68" y="-495.6" font-family="Helvetica,sans-Serif" font-size="11.00"> + normalizar_resultados() </text>
+<text xml:space="preserve" text-anchor="start" x="599.68" y="-482.4" font-family="Helvetica,sans-Serif" font-size="11.00"> + integrar_h2h() </text>
+</g>
+<!-- Scoring&#45;&gt;TorneoNormalizado -->
+<g id="edge9" class="edge">
+<title>Scoring-&gt;TorneoNormalizado</title>
+<path fill="none" stroke="black" d="M633.5,-464.49C633.5,-448.98 633.5,-435 633.5,-435 633.5,-435 924.63,-435 924.63,-435"/>
+<polygon fill="black" stroke="black" points="931.63,-435 924.63,-438.15 929.35,-435 924.63,-435 924.63,-435 924.63,-435 929.35,-435 924.63,-431.85 931.63,-435"/>
+<text xml:space="preserve" text-anchor="middle" x="881.26" y="-462.5" font-family="Helvetica,sans-Serif" font-size="10.00">analiza</text>
+</g>
+<!-- Scoring&#45;&gt;RankingEntry -->
+<g id="edge10" class="edge">
+<title>Scoring-&gt;RankingEntry</title>
+<path fill="none" stroke="black" d="M633.5,-546.36C633.5,-600.6 633.5,-689.6 633.5,-689.6 633.5,-689.6 950.75,-689.6 950.75,-689.6"/>
+<polygon fill="black" stroke="black" points="957.75,-689.6 950.75,-692.75 955.47,-689.6 950.75,-689.6 950.75,-689.6 950.75,-689.6 955.47,-689.6 950.75,-686.45 957.75,-689.6"/>
+<text xml:space="preserve" text-anchor="middle" x="881.26" y="-643.5" font-family="Helvetica,sans-Serif" font-size="10.00">produce</text>
+</g>
+<!-- H2H -->
+<g id="node9" class="node">
+<title>H2H</title>
+<polygon fill="none" stroke="black" points="928.17,-526.9 928.17,-582.1 1247.81,-582.1 1247.81,-526.9 928.17,-526.9"/>
+<text xml:space="preserve" text-anchor="middle" x="988.9" y="-551.2" font-family="Helvetica,sans-Serif" font-size="11.00">h2h.py (auxiliar)</text>
+<polyline fill="none" stroke="black" points="1049.62,-526.9 1049.62,-582.1"/>
+<text xml:space="preserve" text-anchor="start" x="1071.22" y="-557.8" font-family="Helvetica,sans-Serif" font-size="11.00">+ calcular_matriz_h2h(torneos) </text>
+<text xml:space="preserve" text-anchor="start" x="1071.22" y="-544.6" font-family="Helvetica,sans-Serif" font-size="11.00"> + normalizar_h2h() </text>
+</g>
+<!-- Scoring&#45;&gt;H2H -->
+<g id="edge8" class="edge">
+<title>Scoring-&gt;H2H</title>
+<path fill="none" stroke="black" d="M782.15,-536.6C782.15,-536.6 919.57,-536.6 919.57,-536.6"/>
+<polygon fill="black" stroke="black" points="926.57,-536.6 919.57,-539.75 924.29,-536.6 919.57,-536.6 919.57,-536.6 919.57,-536.6 924.29,-536.6 919.57,-533.45 926.57,-536.6"/>
+<text xml:space="preserve" text-anchor="middle" x="881.26" y="-554.5" font-family="Helvetica,sans-Serif" font-size="10.00">usa (auxiliar)</text>
+</g>
+<!-- Traducciones -->
+<g id="node10" class="node">
+<title>Traducciones</title>
+<polygon fill="none" stroke="black" points="432.16,-244.5 432.16,-286.5 834.35,-286.5 834.35,-244.5 432.16,-244.5"/>
+<text xml:space="preserve" text-anchor="middle" x="492.28" y="-262.2" font-family="Helvetica,sans-Serif" font-size="11.00">traducciones.py</text>
+<polyline fill="none" stroke="black" points="552.41,-244.5 552.41,-286.5"/>
+<text xml:space="preserve" text-anchor="start" x="574.01" y="-262.2" font-family="Helvetica,sans-Serif" font-size="11.00">+ cargar_torneos(ruta): List[TorneoNormalizado] </text>
+</g>
+<!-- Traducciones&#45;&gt;TorneoNormalizado -->
+<g id="edge4" class="edge">
+<title>Traducciones-&gt;TorneoNormalizado</title>
+<path fill="none" stroke="black" d="M834.73,-272.67C891.69,-272.67 938.5,-272.67 938.5,-272.67 938.5,-272.67 938.5,-350.72 938.5,-350.72"/>
+<polygon fill="black" stroke="black" points="938.5,-357.72 935.35,-350.72 938.5,-355.44 938.5,-350.72 938.5,-350.72 938.5,-350.72 938.5,-355.44 941.65,-350.72 938.5,-357.72"/>
+<text xml:space="preserve" text-anchor="middle" x="881.26" y="-368.5" font-family="Helvetica,sans-Serif" font-size="10.00">crea</text>
+</g>
+<!-- Traducciones&#45;&gt;Readers -->
+<g id="edge1" class="edge">
+<title>Traducciones-&gt;Readers</title>
+<path fill="none" stroke="black" d="M834.7,-258.33C834.7,-258.33 936.78,-258.33 936.78,-258.33"/>
+<polygon fill="black" stroke="black" points="943.78,-258.33 936.78,-261.48 941.5,-258.33 936.78,-258.33 936.78,-258.33 936.78,-258.33 941.5,-258.33 936.78,-255.18 943.78,-258.33"/>
+<text xml:space="preserve" text-anchor="middle" x="881.26" y="-268.5" font-family="Helvetica,sans-Serif" font-size="10.00">usa</text>
+</g>
+<!-- Traducciones&#45;&gt;Validators -->
+<g id="edge2" class="edge">
+<title>Traducciones-&gt;Validators</title>
+<path fill="none" stroke="black" d="M811.5,-244.25C811.5,-209.3 811.5,-143.5 811.5,-143.5 811.5,-143.5 948.81,-143.5 948.81,-143.5"/>
+<polygon fill="black" stroke="black" points="955.81,-143.5 948.81,-146.65 953.53,-143.5 948.81,-143.5 948.81,-143.5 948.81,-143.5 953.53,-143.5 948.81,-140.35 955.81,-143.5"/>
+<text xml:space="preserve" text-anchor="middle" x="881.26" y="-146.5" font-family="Helvetica,sans-Serif" font-size="10.00">valida</text>
+</g>
+<!-- Dates -->
+<g id="node13" class="node">
+<title>Dates</title>
+<polygon fill="none" stroke="black" points="944.36,-0.5 944.36,-42.5 1231.62,-42.5 1231.62,-0.5 944.36,-0.5"/>
+<text xml:space="preserve" text-anchor="middle" x="986.75" y="-18.2" font-family="Helvetica,sans-Serif" font-size="11.00">dates.py</text>
+<polyline fill="none" stroke="black" points="1029.14,-0.5 1029.14,-42.5"/>
+<text xml:space="preserve" text-anchor="start" x="1050.74" y="-18.2" font-family="Helvetica,sans-Serif" font-size="11.00">+ parse_fecha(nombre_archivo) </text>
+</g>
+<!-- Traducciones&#45;&gt;Dates -->
+<g id="edge3" class="edge">
+<title>Traducciones-&gt;Dates</title>
+<path fill="none" stroke="black" d="M787.5,-244.27C787.5,-184.91 787.5,-21.5 787.5,-21.5 787.5,-21.5 935.69,-21.5 935.69,-21.5"/>
+<polygon fill="black" stroke="black" points="942.69,-21.5 935.69,-24.65 940.41,-21.5 935.69,-21.5 935.69,-21.5 935.69,-21.5 940.41,-21.5 935.69,-18.35 942.69,-21.5"/>
+<text xml:space="preserve" text-anchor="middle" x="881.26" y="-24.5" font-family="Helvetica,sans-Serif" font-size="10.00">parsea fecha</text>
+</g>
+<!-- Ranking -->
+<g id="node11" class="node">
+<title>Ranking</title>
+<polygon fill="none" stroke="black" points="0,-244.5 0,-286.5 329.46,-286.5 329.46,-244.5 0,-244.5"/>
+<text xml:space="preserve" text-anchor="middle" x="46.98" y="-262.2" font-family="Helvetica,sans-Serif" font-size="11.00">ranking.py</text>
+<polyline fill="none" stroke="black" points="93.95,-244.5 93.95,-286.5"/>
+<text xml:space="preserve" text-anchor="start" x="115.55" y="-262.2" font-family="Helvetica,sans-Serif" font-size="11.00">+ generar_ranking(año): RankingTable </text>
+</g>
+<!-- Ranking&#45;&gt;Scoring -->
+<g id="edge6" class="edge">
+<title>Ranking-&gt;Scoring</title>
+<path fill="none" stroke="black" d="M315.5,-286.8C315.5,-345.54 315.5,-505.5 315.5,-505.5 315.5,-505.5 476.39,-505.5 476.39,-505.5"/>
+<polygon fill="black" stroke="black" points="483.39,-505.5 476.39,-508.65 481.11,-505.5 476.39,-505.5 476.39,-505.5 476.39,-505.5 481.11,-505.5 476.39,-502.35 483.39,-505.5"/>
+<text xml:space="preserve" text-anchor="middle" x="380.81" y="-401.5" font-family="Helvetica,sans-Serif" font-size="10.00">calcula ranking</text>
+</g>
+<!-- Ranking&#45;&gt;Traducciones -->
+<g id="edge5" class="edge">
+<title>Ranking-&gt;Traducciones</title>
+<path fill="none" stroke="black" d="M329.91,-265.5C329.91,-265.5 423.55,-265.5 423.55,-265.5"/>
+<polygon fill="black" stroke="black" points="430.55,-265.5 423.55,-268.65 428.27,-265.5 423.55,-265.5 423.55,-265.5 423.55,-265.5 428.27,-265.5 423.55,-262.35 430.55,-265.5"/>
+<text xml:space="preserve" text-anchor="middle" x="380.81" y="-268.5" font-family="Helvetica,sans-Serif" font-size="10.00">lee torneos</text>
+</g>
+<!-- Exporter -->
+<g id="node12" class="node">
+<title>Exporter</title>
+<polygon fill="none" stroke="black" points="501.86,-115.9 501.86,-171.1 764.65,-171.1 764.65,-115.9 501.86,-115.9"/>
+<text xml:space="preserve" text-anchor="middle" x="550.97" y="-140.2" font-family="Helvetica,sans-Serif" font-size="11.00">exporter.py</text>
+<polyline fill="none" stroke="black" points="600.09,-115.9 600.09,-171.1"/>
+<text xml:space="preserve" text-anchor="start" x="621.69" y="-146.8" font-family="Helvetica,sans-Serif" font-size="11.00">+ export_json(ranking) </text>
+<text xml:space="preserve" text-anchor="start" x="621.69" y="-133.6" font-family="Helvetica,sans-Serif" font-size="11.00"> + export_excel(ranking) </text>
+</g>
+<!-- Ranking&#45;&gt;Exporter -->
+<g id="edge7" class="edge">
+<title>Ranking-&gt;Exporter</title>
+<path fill="none" stroke="black" d="M164.5,-244.25C164.5,-209.3 164.5,-143.5 164.5,-143.5 164.5,-143.5 493.22,-143.5 493.22,-143.5"/>
+<polygon fill="black" stroke="black" points="500.22,-143.5 493.22,-146.65 497.93,-143.5 493.22,-143.5 493.22,-143.5 493.22,-143.5 497.93,-143.5 493.22,-140.35 500.22,-143.5"/>
+<text xml:space="preserve" text-anchor="middle" x="380.81" y="-146.5" font-family="Helvetica,sans-Serif" font-size="10.00">exporta</text>
+</g>
+<!-- Exceptions -->
+<g id="node14" class="node">
+<title>Exceptions</title>
+<polygon fill="none" stroke="black" points="28.6,-359.9 28.6,-415.1 300.86,-415.1 300.86,-359.9 28.6,-359.9"/>
+<text xml:space="preserve" text-anchor="middle" x="83.83" y="-384.2" font-family="Helvetica,sans-Serif" font-size="11.00">exceptions.py</text>
+<polyline fill="none" stroke="black" points="139.06,-359.9 139.06,-415.1"/>
+<text xml:space="preserve" text-anchor="start" x="160.66" y="-390.8" font-family="Helvetica,sans-Serif" font-size="11.00">JSONSchemaError </text>
+<text xml:space="preserve" text-anchor="start" x="160.66" y="-377.6" font-family="Helvetica,sans-Serif" font-size="11.00"> TournamentParseError </text>
+</g>
+</g>
+</svg>

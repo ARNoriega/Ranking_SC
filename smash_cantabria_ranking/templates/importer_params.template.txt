@@ -1,0 +1,2 @@
+url=https://start.gg/tournament/REEMPLAZAR_TORNEO
+api_key=OPCIONAL_SI_USAS_ENV

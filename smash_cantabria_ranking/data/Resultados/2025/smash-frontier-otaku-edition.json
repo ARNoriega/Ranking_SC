@@ -1,0 +1,242 @@
+{
+  "data": {
+    "tournament": {
+      "id": 795967,
+      "name": "Smash Frontier: Otaku Edition",
+      "city": "Santander",
+      "addrState": "CB",
+      "countryCode": "ES",
+      "venueName": null,
+      "venueAddress": "C. Floranes, 23, 39010 Santander, Cantabria, España",
+      "startAt": 1749938400,
+      "endAt": 1750010400,
+      "url": "/tournament/smash-frontier-otaku-edition",
+      "events": [
+        {
+          "id": 1392306,
+          "name": "Coach Bracket",
+          "slug": "tournament/smash-frontier-otaku-edition/event/coach-bracket",
+          "numEntrants": 12,
+          "videoGame": {
+            "id": 1386,
+            "name": "Super Smash Bros. Ultimate"
+          },
+          "standings": {
+            "pageInfo": {
+              "total": 0,
+              "totalPages": 0,
+              "page": 1,
+              "perPage": 512
+            },
+            "nodes": []
+          }
+        },
+        {
+          "id": 1392305,
+          "name": "Singles 1vs1",
+          "slug": "tournament/smash-frontier-otaku-edition/event/singles-1vs1",
+          "numEntrants": 13,
+          "videoGame": {
+            "id": 1386,
+            "name": "Super Smash Bros. Ultimate"
+          },
+          "standings": {
+            "pageInfo": {
+              "total": 13,
+              "totalPages": 1,
+              "page": 1,
+              "perPage": 512
+            },
+            "nodes": [
+              {
+                "placement": 1,
+                "entrant": {
+                  "id": 20303745,
+                  "name": "MRB | Narvex",
+                  "participants": [
+                    {
+                      "id": 18711677,
+                      "gamerTag": "Narvex"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 2,
+                "entrant": {
+                  "id": 20332561,
+                  "name": "AND",
+                  "participants": [
+                    {
+                      "id": 18736451,
+                      "gamerTag": "AND"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 3,
+                "entrant": {
+                  "id": 20375721,
+                  "name": "El Juancho",
+                  "participants": [
+                    {
+                      "id": 18772995,
+                      "gamerTag": "El Juancho"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 4,
+                "entrant": {
+                  "id": 20390570,
+                  "name": "RRT4 | Frewe10",
+                  "participants": [
+                    {
+                      "id": 18785275,
+                      "gamerTag": "Frewe10"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 5,
+                "entrant": {
+                  "id": 20363444,
+                  "name": "Adryx",
+                  "participants": [
+                    {
+                      "id": 18762462,
+                      "gamerTag": "Adryx"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 5,
+                "entrant": {
+                  "id": 20388157,
+                  "name": "chatu",
+                  "participants": [
+                    {
+                      "id": 18783451,
+                      "gamerTag": "chatu"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 7,
+                "entrant": {
+                  "id": 20417942,
+                  "name": "Soy | El jodido",
+                  "participants": [
+                    {
+                      "id": 18807480,
+                      "gamerTag": "El jodido"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 7,
+                "entrant": {
+                  "id": 20390674,
+                  "name": "GG | | Saviir",
+                  "participants": [
+                    {
+                      "id": 18785368,
+                      "gamerTag": "Saviir"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 9,
+                "entrant": {
+                  "id": 20381815,
+                  "name": "RHLM/La bestia | Mask",
+                  "participants": [
+                    {
+                      "id": 18778190,
+                      "gamerTag": "Mask"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 9,
+                "entrant": {
+                  "id": 20331429,
+                  "name": "ElBromas05",
+                  "participants": [
+                    {
+                      "id": 18735510,
+                      "gamerTag": "ElBromas05"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 9,
+                "entrant": {
+                  "id": 20342120,
+                  "name": "Th3Pingu3",
+                  "participants": [
+                    {
+                      "id": 18744961,
+                      "gamerTag": "Th3Pingu3"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 9,
+                "entrant": {
+                  "id": 20414170,
+                  "name": "EQTMAMQNN | Sombreitor",
+                  "participants": [
+                    {
+                      "id": 18795378,
+                      "gamerTag": "Sombreitor"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 13,
+                "entrant": {
+                  "id": 20339951,
+                  "name": "Barlos",
+                  "participants": [
+                    {
+                      "id": 18742941,
+                      "gamerTag": "Barlos"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "extensions": {
+    "cacheControl": {
+      "version": 1,
+      "hints": [
+        {
+          "path": [
+            "tournament"
+          ],
+          "maxAge": 300,
+          "scope": "PRIVATE"
+        }
+      ]
+    },
+    "queryComplexity": 47
+  },
+  "actionRecords": []
+}

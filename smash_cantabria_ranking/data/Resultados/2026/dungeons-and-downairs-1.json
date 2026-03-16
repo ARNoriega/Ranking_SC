@@ -1,0 +1,242 @@
+{
+  "data": {
+    "tournament": {
+      "id": 886522,
+      "name": "Dungeons and Downairs #1",
+      "city": "Santander",
+      "addrState": "CB",
+      "countryCode": "ES",
+      "venueName": null,
+      "venueAddress": "C. Floranes, 23, 39010 Santander, Cantabria, España",
+      "startAt": 1772838000,
+      "endAt": 1772910000,
+      "url": "/tournament/dungeons-and-downairs-1",
+      "events": [
+        {
+          "id": 1571952,
+          "name": "Ultimate Ladder",
+          "slug": "tournament/dungeons-and-downairs-1/event/ultimate-ladder",
+          "numEntrants": 13,
+          "videoGame": {
+            "id": 1386,
+            "name": "Super Smash Bros. Ultimate"
+          },
+          "standings": {
+            "pageInfo": {
+              "total": 0,
+              "totalPages": 0,
+              "page": 1,
+              "perPage": 512
+            },
+            "nodes": []
+          }
+        },
+        {
+          "id": 1571951,
+          "name": "Ultimate Singles",
+          "slug": "tournament/dungeons-and-downairs-1/event/ultimate-singles",
+          "numEntrants": 13,
+          "videoGame": {
+            "id": 1386,
+            "name": "Super Smash Bros. Ultimate"
+          },
+          "standings": {
+            "pageInfo": {
+              "total": 13,
+              "totalPages": 1,
+              "page": 1,
+              "perPage": 512
+            },
+            "nodes": [
+              {
+                "placement": 1,
+                "entrant": {
+                  "id": 22803628,
+                  "name": "El Juancho",
+                  "participants": [
+                    {
+                      "id": 20952332,
+                      "gamerTag": "El Juancho"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 2,
+                "entrant": {
+                  "id": 22782515,
+                  "name": "AND",
+                  "participants": [
+                    {
+                      "id": 20932436,
+                      "gamerTag": "AND"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 3,
+                "entrant": {
+                  "id": 22786452,
+                  "name": "MRB | Narvex",
+                  "participants": [
+                    {
+                      "id": 20936119,
+                      "gamerTag": "Narvex"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 4,
+                "entrant": {
+                  "id": 22786310,
+                  "name": "chatu",
+                  "participants": [
+                    {
+                      "id": 20935977,
+                      "gamerTag": "chatu"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 5,
+                "entrant": {
+                  "id": 22828188,
+                  "name": "LT | RC | Zerø",
+                  "participants": [
+                    {
+                      "id": 20975263,
+                      "gamerTag": "Zerø"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 5,
+                "entrant": {
+                  "id": 22808642,
+                  "name": "NICHE | Diexter",
+                  "participants": [
+                    {
+                      "id": 20956978,
+                      "gamerTag": "Diexter"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 7,
+                "entrant": {
+                  "id": 22804643,
+                  "name": "Hb_81",
+                  "participants": [
+                    {
+                      "id": 20953277,
+                      "gamerTag": "Hb_81"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 7,
+                "entrant": {
+                  "id": 22782327,
+                  "name": "Th3Pingu3",
+                  "participants": [
+                    {
+                      "id": 20932261,
+                      "gamerTag": "Th3Pingu3"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 9,
+                "entrant": {
+                  "id": 22827877,
+                  "name": "Nyco | Nycolast_Baez",
+                  "participants": [
+                    {
+                      "id": 20974979,
+                      "gamerTag": "Nycolast_Baez"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 9,
+                "entrant": {
+                  "id": 22818580,
+                  "name": "peibol",
+                  "participants": [
+                    {
+                      "id": 20966355,
+                      "gamerTag": "peibol"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 9,
+                "entrant": {
+                  "id": 22802632,
+                  "name": "Adryx",
+                  "participants": [
+                    {
+                      "id": 20951510,
+                      "gamerTag": "Adryx"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 9,
+                "entrant": {
+                  "id": 22818574,
+                  "name": "EnzoAR",
+                  "participants": [
+                    {
+                      "id": 20966345,
+                      "gamerTag": "EnzoAR"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 13,
+                "entrant": {
+                  "id": 22826339,
+                  "name": "Chadyel",
+                  "participants": [
+                    {
+                      "id": 20973392,
+                      "gamerTag": "Chadyel"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "extensions": {
+    "cacheControl": {
+      "version": 1,
+      "hints": [
+        {
+          "path": [
+            "tournament"
+          ],
+          "maxAge": 300,
+          "scope": "PRIVATE"
+        }
+      ]
+    },
+    "queryComplexity": 47
+  },
+  "actionRecords": []
+}

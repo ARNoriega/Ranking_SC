@@ -1,0 +1,431 @@
+{
+  "data": {
+    "tournament": {
+      "id": 683065,
+      "name": "Maliaño Kart: Copa Hoja",
+      "city": "Camargo",
+      "addrState": "CB",
+      "countryCode": "ES",
+      "venueName": null,
+      "venueAddress": "Parque de Cros, Unnamed Road, 39600, 39600 Camargo, Cantabria, España",
+      "startAt": 1720303200,
+      "endAt": 1720375200,
+      "url": "/tournament/malia-o-kart-copa-hoja",
+      "events": [
+        {
+          "id": 1164490,
+          "name": "Circuito principal",
+          "slug": "tournament/malia-o-kart-copa-hoja/event/circuito-principal",
+          "numEntrants": 17,
+          "videoGame": {
+            "id": 1386,
+            "name": "Super Smash Bros. Ultimate"
+          },
+          "standings": {
+            "pageInfo": {
+              "total": 17,
+              "totalPages": 1,
+              "page": 1,
+              "perPage": 512
+            },
+            "nodes": [
+              {
+                "placement": 1,
+                "entrant": {
+                  "id": 17009655,
+                  "name": "Tormen",
+                  "participants": [
+                    {
+                      "id": 15798873,
+                      "gamerTag": "Tormen"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 2,
+                "entrant": {
+                  "id": 17041611,
+                  "name": "chatu",
+                  "participants": [
+                    {
+                      "id": 15827036,
+                      "gamerTag": "chatu"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 3,
+                "entrant": {
+                  "id": 17065904,
+                  "name": "JorgitoPredator",
+                  "participants": [
+                    {
+                      "id": 15847933,
+                      "gamerTag": "JorgitoPredator"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 4,
+                "entrant": {
+                  "id": 17015621,
+                  "name": "MKT | Golo",
+                  "participants": [
+                    {
+                      "id": 15804147,
+                      "gamerTag": "Golo"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 5,
+                "entrant": {
+                  "id": 17033577,
+                  "name": "AMT | Narvex",
+                  "participants": [
+                    {
+                      "id": 15820106,
+                      "gamerTag": "Narvex"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 5,
+                "entrant": {
+                  "id": 17066745,
+                  "name": "Mask",
+                  "participants": [
+                    {
+                      "id": 15848688,
+                      "gamerTag": "Mask"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 7,
+                "entrant": {
+                  "id": 17033578,
+                  "name": "Frewe10",
+                  "participants": [
+                    {
+                      "id": 15820107,
+                      "gamerTag": "Frewe10"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 7,
+                "entrant": {
+                  "id": 17009507,
+                  "name": "Ale | Diexter",
+                  "participants": [
+                    {
+                      "id": 15798735,
+                      "gamerTag": "Diexter"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 9,
+                "entrant": {
+                  "id": 17033565,
+                  "name": "Soulsilver",
+                  "participants": [
+                    {
+                      "id": 15820094,
+                      "gamerTag": "Soulsilver"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 9,
+                "entrant": {
+                  "id": 17094122,
+                  "name": "CHN | Hanival",
+                  "participants": [
+                    {
+                      "id": 15874917,
+                      "gamerTag": "Hanival"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 9,
+                "entrant": {
+                  "id": 17078340,
+                  "name": "FSmash | Adryx",
+                  "participants": [
+                    {
+                      "id": 15859661,
+                      "gamerTag": "Adryx"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 9,
+                "entrant": {
+                  "id": 17036558,
+                  "name": "Nyco_Baez | Nycolast",
+                  "participants": [
+                    {
+                      "id": 15822764,
+                      "gamerTag": "Nycolast"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 13,
+                "entrant": {
+                  "id": 17095469,
+                  "name": "B-Jaguar",
+                  "participants": [
+                    {
+                      "id": 15876180,
+                      "gamerTag": "B-Jaguar"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 13,
+                "entrant": {
+                  "id": 17094028,
+                  "name": "Yo | Edu 024",
+                  "participants": [
+                    {
+                      "id": 15874834,
+                      "gamerTag": "Edu 024"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 13,
+                "entrant": {
+                  "id": 17061191,
+                  "name": "Pichuru",
+                  "participants": [
+                    {
+                      "id": 15843482,
+                      "gamerTag": "Pichuru"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 13,
+                "entrant": {
+                  "id": 17066004,
+                  "name": "AMT | Dinokami",
+                  "participants": [
+                    {
+                      "id": 15848028,
+                      "gamerTag": "Dinokami"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 17,
+                "entrant": {
+                  "id": 17074068,
+                  "name": "Bafu",
+                  "participants": [
+                    {
+                      "id": 15855687,
+                      "gamerTag": "Bafu"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": 1164491,
+          "name": "Team race",
+          "slug": "tournament/malia-o-kart-copa-hoja/event/team-race",
+          "numEntrants": 8,
+          "videoGame": {
+            "id": 1386,
+            "name": "Super Smash Bros. Ultimate"
+          },
+          "standings": {
+            "pageInfo": {
+              "total": 8,
+              "totalPages": 1,
+              "page": 1,
+              "perPage": 512
+            },
+            "nodes": [
+              {
+                "placement": 1,
+                "entrant": {
+                  "id": 17041700,
+                  "name": "Humildad",
+                  "participants": [
+                    {
+                      "id": 15827036,
+                      "gamerTag": "chatu"
+                    },
+                    {
+                      "id": 15798873,
+                      "gamerTag": "Tormen"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 2,
+                "entrant": {
+                  "id": 17100313,
+                  "name": "NerfLittlemac",
+                  "participants": [
+                    {
+                      "id": 15848688,
+                      "gamerTag": "Mask"
+                    },
+                    {
+                      "id": 15859661,
+                      "gamerTag": "Adryx"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 3,
+                "entrant": {
+                  "id": 17116591,
+                  "name": "Jorgito / Golo",
+                  "participants": [
+                    {
+                      "id": 15804147,
+                      "gamerTag": "Golo"
+                    },
+                    {
+                      "id": 15847933,
+                      "gamerTag": "JorgitoPredator"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 4,
+                "entrant": {
+                  "id": 17116597,
+                  "name": "Dinokami / Edu",
+                  "participants": [
+                    {
+                      "id": 15848028,
+                      "gamerTag": "Dinokami"
+                    },
+                    {
+                      "id": 15874834,
+                      "gamerTag": "Edu 024"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 5,
+                "entrant": {
+                  "id": 17116575,
+                  "name": "Hero of hyrule",
+                  "participants": [
+                    {
+                      "id": 15874917,
+                      "gamerTag": "Hanival"
+                    },
+                    {
+                      "id": 15820106,
+                      "gamerTag": "Narvex"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 5,
+                "entrant": {
+                  "id": 17036600,
+                  "name": "Low tier gang",
+                  "participants": [
+                    {
+                      "id": 15798735,
+                      "gamerTag": "Diexter"
+                    },
+                    {
+                      "id": 15822764,
+                      "gamerTag": "Nycolast"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 7,
+                "entrant": {
+                  "id": 17036287,
+                  "name": "The Mercadona Thieves",
+                  "participants": [
+                    {
+                      "id": 15820107,
+                      "gamerTag": "Frewe10"
+                    },
+                    {
+                      "id": 15820094,
+                      "gamerTag": "Soulsilver"
+                    }
+                  ]
+                }
+              },
+              {
+                "placement": 7,
+                "entrant": {
+                  "id": 17116582,
+                  "name": "Michu",
+                  "participants": [
+                    {
+                      "id": 15876180,
+                      "gamerTag": "B-Jaguar"
+                    },
+                    {
+                      "id": 15843482,
+                      "gamerTag": "Pichuru"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "extensions": {
+    "cacheControl": {
+      "version": 1,
+      "hints": [
+        {
+          "path": [
+            "tournament"
+          ],
+          "maxAge": 300,
+          "scope": "PRIVATE"
+        }
+      ]
+    },
+    "queryComplexity": 91
+  },
+  "actionRecords": []
+}
