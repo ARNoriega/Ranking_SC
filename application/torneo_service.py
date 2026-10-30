@@ -14,7 +14,31 @@ class TorneoService:
     def __init__(self, repository: ResultRepository) -> None:
         self.repository = repository
 
+    @staticmethod
+    def validar_torneo(torneo: Torneo) -> None:
+        if not torneo.nombre.strip():
+            raise ValueError("El torneo necesita un nombre")
+        if not math.isfinite(torneo.puntuacion) or torneo.puntuacion < 0:
+            raise ValueError("La puntuacion del torneo no es valida")
+        if torneo.anho < 1:
+            raise ValueError("El año del torneo no es valido")
+        if not torneo.participantes:
+            raise ValueError("El torneo necesita al menos un participante")
+
+        seeds: set[int] = set()
+        jugadores: set[str] = set()
+        for seed, jugador in torneo.participantes:
+            if seed < 1 or not isinstance(jugador, str) or not jugador.strip():
+                raise ValueError("El torneo contiene un participante invalido")
+            if seed in seeds or jugador in jugadores:
+                raise ValueError("El torneo contiene seeds o jugadores repetidos")
+            seeds.add(seed)
+            jugadores.add(jugador)
+
     def guardar_torneos(self, torneos: Iterable[Torneo]) -> None:
+        torneos = list(torneos)
+        for torneo in torneos:
+            self.validar_torneo(torneo)
         datos = self.repository.load()
         datos["torneos"] = [
             {
@@ -29,6 +53,24 @@ class TorneoService:
             for torneo in torneos
         ]
         self.repository.save(datos)
+
+    @staticmethod
+    def quitar_duplicados(torneos: Iterable[Torneo]) -> list[Torneo]:
+        """Conserva la primera aparición de cada torneo idéntico."""
+        resultado: list[Torneo] = []
+        vistos: set[tuple[float, int, str, tuple[tuple[int, str], ...]]] = set()
+        for torneo in torneos:
+            clave = (
+                torneo.puntuacion,
+                torneo.anho,
+                torneo.nombre,
+                tuple(torneo.participantes),
+            )
+            if clave in vistos:
+                continue
+            vistos.add(clave)
+            resultado.append(torneo)
+        return resultado
 
     def cargar_torneos(self) -> list[Torneo]:
         """Carga los torneos guardados y reconstruye sus objetos de dominio."""

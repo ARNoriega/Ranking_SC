@@ -95,6 +95,60 @@ def test_aplicacion_guarda_json(tmp_path) -> None:
     assert contenido["ranking"][0]["jugador"] == "Jugador1"
 
 
+def test_rankings_guardados_se_pueden_listar_cargar_y_eliminar(tmp_path) -> None:
+    repository = JsonRepository(tmp_path / "resultados.json")
+    service = RankingService(repository, TopAcumulativoProcessor())
+    ranking = [("Ana", 1.0), ("Luis", 0.5)]
+
+    service.guardar_ranking(ranking, "ranking_2026")
+    service.guardar_ranking([("Otra", 0.25)], "ranking_2025")
+
+    assert service.listar_rankings() == ["ranking_2025", "ranking_2026"]
+    assert service.cargar_ranking("ranking_2026") == ranking
+
+    service.eliminar_ranking("ranking_2025")
+    assert service.listar_rankings() == ["ranking_2026"]
+
+
+def test_guardar_ranking_no_sobrescribe_sin_confirmacion(tmp_path) -> None:
+    repository = JsonRepository(tmp_path / "resultados.json")
+    service = RankingService(repository, TopAcumulativoProcessor())
+    service.guardar_ranking([("Ana", 1.0)], "ranking_2026")
+
+    with pytest.raises(FileExistsError, match="ya existe"):
+        service.guardar_ranking([("Luis", 1.0)], "ranking_2026")
+    service.guardar_ranking([("Luis", 1.0)], "ranking_2026", sobrescribir=True)
+    assert service.cargar_ranking("ranking_2026") == [("Luis", 1.0)]
+
+
+@pytest.mark.parametrize(
+    "ranking",
+    [
+        [],
+        [("", 1.0)],
+        [("Ana", float("nan"))],
+        [("Ana", 0.5), ("Ana", 0.4)],
+        [("Ana", 0.5), ("Luis", 0.6)],
+    ],
+)
+def test_guardar_ranking_valida_todos_sus_resultados(tmp_path, ranking) -> None:
+    service = RankingService(
+        JsonRepository(tmp_path / "resultados.json"),
+        TopAcumulativoProcessor(),
+    )
+    with pytest.raises(ValueError):
+        service.guardar_ranking(ranking, "ranking_2026")
+
+
+def test_cargar_ranking_invalido_da_error_amigable(tmp_path) -> None:
+    repository = JsonRepository(tmp_path / "resultados.json")
+    repository.save({"ranking_2026": [{"jugador": "Ana", "puntuacion": "nan"}]})
+    service = RankingService(repository, TopAcumulativoProcessor())
+
+    with pytest.raises(JsonRepositoryError, match="datos invalidos"):
+        service.cargar_ranking("ranking_2026")
+
+
 def test_json_corrupto_da_un_error_controlable(tmp_path) -> None:
     ruta = tmp_path / "resultados.json"
     ruta.write_text('{"torneos": [', encoding="utf-8")
@@ -178,6 +232,43 @@ def test_torneos_se_pueden_guardar_cargar_y_eliminar(tmp_path) -> None:
     assert service.cargar_torneos() == []
 
 
+@pytest.mark.parametrize(
+    "torneo",
+    [
+        Torneo(float("nan"), [(1, "Ana")], "Regional", 2026),
+        Torneo(-1.0, [(1, "Ana")], "Regional", 2026),
+        Torneo(800.0, [], "Regional", 2026),
+        Torneo(800.0, [(1, "Ana"), (1, "Luis")], "Regional", 2026),
+        Torneo(800.0, [(1, "Ana"), (2, "Ana")], "Regional", 2026),
+        Torneo(800.0, [(1, "Ana")], "", 2026),
+    ],
+)
+def test_guardar_torneo_valida_datos_completos(tmp_path, torneo) -> None:
+    service = TorneoService(JsonRepository(tmp_path / "resultados.json"))
+
+    with pytest.raises(ValueError):
+        service.guardar_torneos([torneo])
+
+
+def test_guardar_torneos_no_persiste_duplicados_exactos(tmp_path) -> None:
+    service = TorneoService(JsonRepository(tmp_path / "resultados.json"))
+    torneo = Torneo(800.0, [(1, "Ana")], "Regional", 2026)
+
+    service.guardar_torneos(TorneoService.quitar_duplicados([torneo, torneo]))
+
+    assert len(service.cargar_torneos()) == 1
+
+
+def test_quitar_duplicados_de_torneos_conserva_el_orden() -> None:
+    torneo = Torneo(799.0, [(1, "Ana")], "Demo 1", 2026)
+    otro = Torneo(800.0, [(1, "Luis")], "Demo 2", 2026)
+
+    assert TorneoService.quitar_duplicados([torneo, torneo, otro, torneo]) == [
+        torneo,
+        otro,
+    ]
+
+
 def test_presentacion_es_independiente_del_procesado() -> None:
     mostrado = []
 
@@ -200,3 +291,7 @@ def test_ranking_generado_se_puede_parsear_y_validar() -> None:
         RankingApp._parsear_ranking("1. Ana: 0.9500\n2. Ana: 0.7000")
     with pytest.raises(ValueError):
         RankingApp._parsear_ranking("")
+    with pytest.raises(ValueError):
+        RankingApp._parsear_ranking("1. Ana: 0.9\n3. Luis: 0.8")
+    with pytest.raises(ValueError):
+        RankingApp._parsear_ranking("1. Ana: 0.8\n2. Luis: 0.9")

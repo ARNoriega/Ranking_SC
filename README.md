@@ -20,14 +20,33 @@ La simulacion genera una grafica en `data/simulacion.png`.
 
 ```python
 from application.ranking_service import RankingService
+from application.processing_gateway import TopAcumulativoProcessor
 from database.json_repository import JsonRepository
-from processing.ranking_engine import Torneo
 
-servicio = RankingService(JsonRepository("data/resultados.json"))
-resultado = servicio.generar_y_guardar(torneos)
+repositorio = JsonRepository("data/resultados.json")
+servicio = RankingService(repositorio, TopAcumulativoProcessor())
+resultado = servicio.generar_y_guardar(torneos, "ranking_2026")
 ```
 
-El motor seleccionado es `TopAcumulativo`. Los resultados se guardan como JSON con el nombre del ranking y una lista de jugadores con su puntuacion.
+El motor seleccionado es `TopAcumulativo`. Los resultados se guardan como JSON con el nombre del ranking y una lista de jugadores con su puntuacion. El servicio valida que el ranking no este vacio, que no haya jugadores repetidos, que las puntuaciones sean finitas y que esten ordenadas de mayor a menor.
+
+Por seguridad, guardar un ranking con un nombre ya existente produce un error. Para reemplazarlo desde codigo hay que indicarlo explicitamente:
+
+```python
+servicio.guardar_ranking(
+    resultado,
+    "ranking_2026",
+    sobrescribir=True,
+)
+```
+
+Los rankings guardados se pueden consultar, cargar y eliminar:
+
+```python
+servicio.listar_rankings()
+ranking = servicio.cargar_ranking("ranking_2026")
+servicio.eliminar_ranking("ranking_2026")
+```
 
 ## Prototipo visual
 
@@ -35,7 +54,16 @@ El motor seleccionado es `TopAcumulativo`. Los resultados se guardan como JSON c
 python -m application.visual
 ```
 
-La interfaz permite introducir el nombre y los puntos de cada torneo, pegar los participantes ordenados por resultado usando el formato `seed, jugador`, calcular el ranking acumulativo y guardar el resultado en `data/resultados.json`.
+La interfaz permite:
+
+- Introducir, editar y eliminar torneos.
+- Cargar torneos demo sin duplicarlos.
+- Filtrar torneos por año.
+- Calcular y editar el ranking acumulativo.
+- Guardar rankings con confirmacion antes de sobrescribirlos.
+- Seleccionar, cargar y eliminar rankings guardados.
+
+Los participantes se introducen uno por linea usando el formato `seed, jugador`.
 
 ## Ejecutar el proyecto
 
@@ -45,4 +73,10 @@ Desde PowerShell:
 .\run_project.ps1
 ```
 
-También puedes abrir `run_project.bat` con doble clic. El script compila primero las capas del proyecto y las pruebas; solo si no hay errores inicia la aplicación visual.
+El script compila el proyecto, ejecuta las pruebas con `pytest` y solo si ambas fases terminan correctamente inicia la aplicacion visual. Tambien puedes abrir `run_project.bat` con doble clic.
+
+Para ejecutar solo las pruebas:
+
+```powershell
+python -m pytest -q
+```

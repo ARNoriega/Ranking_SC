@@ -1,5 +1,6 @@
 import tkinter as tk
 from datetime import date
+import math
 import re
 from tkinter import messagebox, ttk
 
@@ -45,9 +46,11 @@ class RankingApp:
         self.indice_edicion: int | None = None
         self.indices_visibles: list[int] = []
         self.ranking_actual: list[tuple[str, float]] = []
+        self.nombre_ranking_actual: str | None = None
         self.editando_ranking = False
         self._crear_interfaz()
         self._actualizar_lista_torneos()
+        self._actualizar_lista_rankings()
 
     def _crear_interfaz(self) -> None:
         self.root.title("Rankings - Top Acumulativo")
@@ -117,7 +120,7 @@ class RankingApp:
 
         botones = ttk.Frame(contenedor)
         botones.grid(row=6, column=0, columnspan=2, sticky="ew", pady=10)
-        for columna in range(9):
+        for columna in range(10):
             botones.columnconfigure(columna, weight=1)
         self.boton_torneo = ttk.Button(botones, text="Anadir torneo", command=self.anadir_torneo)
         self.boton_torneo.grid(row=0, column=0, sticky="ew", padx=(0, 4))
@@ -127,8 +130,13 @@ class RankingApp:
         ttk.Button(botones, text="Generar", command=self.generar).grid(row=0, column=4, sticky="ew", padx=4)
         ttk.Button(botones, text="Editar ranking", command=self.editar_ranking).grid(row=0, column=5, sticky="ew", padx=4)
         ttk.Button(botones, text="Guardar ranking", command=self.guardar_ranking).grid(row=0, column=6, sticky="ew", padx=4)
-        ttk.Button(botones, text="Limpiar", command=self.limpiar).grid(row=0, column=7, sticky="ew", padx=4)
-        ttk.Button(botones, text="Salir", command=self.salir).grid(row=0, column=8, sticky="ew", padx=(4, 0))
+        ttk.Button(
+            botones,
+            text="Cancelar edicion",
+            command=self.cancelar_edicion,
+        ).grid(row=0, column=7, sticky="ew", padx=4)
+        ttk.Button(botones, text="Limpiar", command=self.limpiar).grid(row=0, column=8, sticky="ew", padx=4)
+        ttk.Button(botones, text="Salir", command=self.salir).grid(row=0, column=9, sticky="ew", padx=(4, 0))
 
         ttk.Label(contenedor, text="Torneos introducidos (Ctrl+Click para varios)").grid(row=7, column=0, sticky="nw")
         self.lista_torneos = tk.Listbox(contenedor, height=8, selectmode=tk.EXTENDED)
@@ -138,6 +146,25 @@ class RankingApp:
         self.resultado = tk.Text(contenedor, height=10, state="disabled")
         self.resultado.grid(row=9, column=0, columnspan=2, sticky="nsew")
         contenedor.rowconfigure(9, weight=1)
+
+        ttk.Label(contenedor, text="Rankings guardados").grid(
+            row=10, column=0, sticky="nw", pady=(12, 4)
+        )
+        self.lista_rankings = tk.Listbox(contenedor, height=5, exportselection=False)
+        self.lista_rankings.grid(row=11, column=0, sticky="nsew")
+        botones_rankings = ttk.Frame(contenedor)
+        botones_rankings.grid(row=11, column=1, sticky="new", padx=(8, 0))
+        ttk.Button(
+            botones_rankings,
+            text="Cargar ranking",
+            command=self.cargar_ranking_guardado,
+        ).pack(fill="x", pady=(0, 4))
+        ttk.Button(
+            botones_rankings,
+            text="Eliminar ranking",
+            command=self.eliminar_ranking_guardado,
+        ).pack(fill="x")
+        contenedor.rowconfigure(11, weight=1)
 
     def _leer_torneo(self) -> Torneo:
         nombre = self.nombre.get().strip()
@@ -179,6 +206,8 @@ class RankingApp:
 
         if not participantes:
             raise ValueError("Introduce al menos un participante")
+        if not math.isfinite(puntos) or puntos < 0:
+            raise ValueError("Los puntos deben ser un numero finito no negativo")
         torneo = Torneo(puntos, participantes, nombre, anho)
         return torneo
 
@@ -205,6 +234,18 @@ class RankingApp:
         except ValueError as error:
             messagebox.showerror("Datos no validos", str(error))
             return
+        torneos_existentes = [
+            torneo
+            for indice, torneo in enumerate(self.torneos)
+            if indice != self.indice_edicion
+        ]
+        if torneo in torneos_existentes:
+            messagebox.showwarning(
+                "Torneo duplicado",
+                "Ese torneo ya esta guardado.",
+                parent=self.root,
+            )
+            return
         if self.indice_edicion is None:
             self.torneos.append(torneo)
         else:
@@ -218,9 +259,22 @@ class RankingApp:
         self._cancelar_edicion()
 
     def cargar_demo(self) -> None:
-        """Añade torneos demo reproducibles a la lista actual."""
+        """Añade las demos que todavía no existen y elimina duplicados exactos."""
         demos = crear_demo_torneos()
-        self.torneos.extend(demos)
+        torneos_sin_duplicados = self.torneo_service.quitar_duplicados(self.torneos)
+        demos_nuevas = [
+            demo for demo in demos
+            if demo not in torneos_sin_duplicados
+        ]
+        torneos_sin_duplicados.extend(demos_nuevas)
+        if not demos_nuevas and len(torneos_sin_duplicados) == len(self.torneos):
+            messagebox.showinfo(
+                "Demo ya cargada",
+                "Los torneos demo ya están cargados.",
+                parent=self.root,
+            )
+            return
+        self.torneos = torneos_sin_duplicados
         try:
             self.torneo_service.guardar_torneos(self.torneos)
         except JsonRepositoryError as error:
@@ -233,6 +287,13 @@ class RankingApp:
         seleccion = self.lista_torneos.curselection()
         if not seleccion:
             messagebox.showwarning("Sin seleccion", "Selecciona un torneo para editarlo")
+            return
+        if len(seleccion) > 1:
+            messagebox.showwarning(
+                "Seleccion multiple",
+                "Selecciona un solo torneo para editarlo",
+                parent=self.root,
+            )
             return
         self.indice_edicion = self.indices_visibles[seleccion[0]]
         torneo = self.torneos[self.indice_edicion]
@@ -281,6 +342,22 @@ class RankingApp:
         self.anho.insert(0, str(date.today().year))
         self.participantes.delete("1.0", tk.END)
 
+    def _cancelar_edicion_ranking(self) -> None:
+        self.editando_ranking = False
+        if self.ranking_actual:
+            self._mostrar_ranking(self.ranking_actual)
+            return
+        self.resultado.configure(state="normal")
+        self.resultado.delete("1.0", tk.END)
+        self.resultado.configure(state="disabled")
+
+    def cancelar_edicion(self) -> None:
+        """Descarta los cambios pendientes del formulario o del ranking."""
+        if self.indice_edicion is not None:
+            self._cancelar_edicion()
+        if self.editando_ranking:
+            self._cancelar_edicion_ranking()
+
     def _torneos_del_anho(self) -> list[Torneo]:
         """Devuelve los torneos incluidos en el filtro anual seleccionado."""
         filtro = self.filtro_anho.get()
@@ -295,12 +372,9 @@ class RankingApp:
             return
         ranking = self.service.generar_ranking(torneos)
         self.ranking_actual = ranking
+        self.nombre_ranking_actual = None
         self.editando_ranking = False
-        self.resultado.configure(state="normal")
-        self.resultado.delete("1.0", tk.END)
-        for puesto, (jugador, puntuacion) in enumerate(ranking, 1):
-            self.resultado.insert(tk.END, f"{puesto}. {jugador}: {puntuacion:.4f}\n")
-        self.resultado.configure(state="disabled")
+        self._mostrar_ranking(ranking)
 
     @staticmethod
     def _parsear_ranking(texto: str) -> list[tuple[str, float]]:
@@ -308,16 +382,31 @@ class RankingApp:
         ranking = []
         jugadores = set()
         patron = re.compile(r"^\s*\d+\.\s*(.+?):\s*(-?\d+(?:\.\d+)?)\s*$")
+        puesto_esperado = 1
         for numero_linea, linea in enumerate(texto.splitlines(), 1):
             if not linea.strip():
                 continue
             coincidencia = patron.match(linea)
             if coincidencia is None:
                 raise ValueError(f"Linea {numero_linea}: usa 'puesto. jugador: puntuacion'")
+            puesto = int(re.match(r"^\s*(\d+)", linea).group(1))
+            if puesto != puesto_esperado:
+                raise ValueError(
+                    f"Linea {numero_linea}: los puestos deben ser consecutivos empezando en 1"
+                )
+            puesto_esperado += 1
             jugador = coincidencia.group(1).strip()
             puntuacion = float(coincidencia.group(2))
+            if not jugador:
+                raise ValueError(f"Linea {numero_linea}: el jugador no puede estar vacio")
+            if not math.isfinite(puntuacion):
+                raise ValueError(f"Linea {numero_linea}: la puntuacion no es valida")
             if jugador in jugadores:
                 raise ValueError(f"Linea {numero_linea}: jugador repetido")
+            if ranking and puntuacion > ranking[-1][1]:
+                raise ValueError(
+                    f"Linea {numero_linea}: las puntuaciones deben estar ordenadas de mayor a menor"
+                )
             jugadores.add(jugador)
             ranking.append((jugador, puntuacion))
         if not ranking:
@@ -347,6 +436,7 @@ class RankingApp:
         """Limpia el formulario y el resultado sin borrar torneos añadidos."""
         self._cancelar_edicion()
         self.ranking_actual = []
+        self.nombre_ranking_actual = None
         self.editando_ranking = False
         self.resultado.configure(state="normal")
         self.resultado.delete("1.0", tk.END)
@@ -363,29 +453,125 @@ class RankingApp:
             except ValueError as error:
                 messagebox.showerror("Ranking no valido", str(error))
                 return
-            self.ranking_actual = ranking
-            self.editando_ranking = False
-            self.resultado.configure(state="disabled")
+            nombre = self.nombre_ranking_actual or f"ranking_{self.filtro_anho.get()}"
+            try:
+                existe = nombre in self.service.listar_rankings()
+            except JsonRepositoryError as error:
+                messagebox.showerror("No se pudo comprobar el ranking", str(error), parent=self.root)
+                return
+            if existe and not messagebox.askyesno(
+                "Confirmar sobrescritura",
+                f"El ranking '{nombre}' ya existe. ¿Quieres reemplazarlo?",
+                parent=self.root,
+            ):
+                return
             try:
                 self.service.guardar_ranking(
                     ranking,
-                    f"ranking_{self.filtro_anho.get()}",
+                    nombre,
+                    sobrescribir=existe,
                 )
-            except JsonRepositoryError as error:
+            except (JsonRepositoryError, ValueError, FileExistsError) as error:
                 messagebox.showerror("No se pudo guardar el ranking", str(error), parent=self.root)
                 return
+            self.ranking_actual = ranking
+            self.nombre_ranking_actual = nombre
+            self.editando_ranking = False
+            self.resultado.configure(state="disabled")
+            self._actualizar_lista_rankings()
             messagebox.showinfo("Guardado", f"Ranking guardado con {len(ranking)} jugadores")
             return
         torneos = self._torneos_del_anho()
         if not torneos:
             messagebox.showwarning("Sin torneos", "Calcula o anade un torneo primero")
             return
+        nombre = f"ranking_{self.filtro_anho.get()}"
         try:
-            ranking = self.service.generar_y_guardar(torneos, f"ranking_{self.filtro_anho.get()}")
+            existe = nombre in self.service.listar_rankings()
         except JsonRepositoryError as error:
+            messagebox.showerror("No se pudo comprobar el ranking", str(error), parent=self.root)
+            return
+        if existe and not messagebox.askyesno(
+            "Confirmar sobrescritura",
+            f"El ranking '{nombre}' ya existe. ¿Quieres reemplazarlo?",
+            parent=self.root,
+        ):
+            return
+        try:
+            ranking = self.service.generar_y_guardar(
+                torneos,
+                nombre,
+            ) if not existe else self.service.generar_ranking(torneos)
+            if existe:
+                self.service.guardar_ranking(ranking, nombre, sobrescribir=True)
+        except (JsonRepositoryError, ValueError, FileExistsError) as error:
             messagebox.showerror("No se pudo guardar el ranking", str(error), parent=self.root)
             return
+        self.ranking_actual = ranking
+        self.nombre_ranking_actual = nombre
+        self._mostrar_ranking(ranking)
+        self._actualizar_lista_rankings()
         messagebox.showinfo("Guardado", f"Ranking guardado con {len(ranking)} jugadores")
+
+    def _actualizar_lista_rankings(self) -> None:
+        try:
+            nombres = self.service.listar_rankings()
+        except JsonRepositoryError as error:
+            messagebox.showerror("No se pudieron cargar los rankings", str(error), parent=self.root)
+            return
+        self.lista_rankings.delete(0, tk.END)
+        for nombre in nombres:
+            self.lista_rankings.insert(tk.END, nombre)
+
+    def cargar_ranking_guardado(self) -> None:
+        seleccion = self.lista_rankings.curselection()
+        if not seleccion:
+            messagebox.showwarning(
+                "Sin seleccion",
+                "Selecciona un ranking guardado para cargarlo",
+                parent=self.root,
+            )
+            return
+        nombre = self.lista_rankings.get(seleccion[0])
+        try:
+            ranking = self.service.cargar_ranking(nombre)
+        except JsonRepositoryError as error:
+            messagebox.showerror("No se pudo cargar el ranking", str(error), parent=self.root)
+            return
+        self.ranking_actual = ranking
+        self.nombre_ranking_actual = nombre
+        self.editando_ranking = False
+        self._mostrar_ranking(ranking)
+
+    def eliminar_ranking_guardado(self) -> None:
+        seleccion = self.lista_rankings.curselection()
+        if not seleccion:
+            messagebox.showwarning(
+                "Sin seleccion",
+                "Selecciona un ranking guardado para eliminarlo",
+                parent=self.root,
+            )
+            return
+        nombre = self.lista_rankings.get(seleccion[0])
+        if not messagebox.askyesno(
+            "Confirmar eliminacion",
+            f"¿Quieres eliminar el ranking '{nombre}'?",
+            parent=self.root,
+        ):
+            return
+        try:
+            self.service.eliminar_ranking(nombre)
+        except (JsonRepositoryError, ValueError) as error:
+            messagebox.showerror("No se pudo eliminar el ranking", str(error), parent=self.root)
+            return
+        if self.nombre_ranking_actual == nombre:
+            self.ranking_actual = []
+            self.nombre_ranking_actual = None
+            self.editando_ranking = False
+            self.resultado.configure(state="normal")
+            self.resultado.delete("1.0", tk.END)
+            self.resultado.configure(state="disabled")
+        self._actualizar_lista_rankings()
 
 
 def crear_app() -> RankingApp:

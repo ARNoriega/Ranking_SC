@@ -18,6 +18,13 @@ if ($LASTEXITCODE -ne 0) {
 }
 
 Write-Host "Compilacion correcta." -ForegroundColor Green
+Write-Host "Ejecutando las pruebas..." -ForegroundColor Cyan
+& $python.Source -m pytest -q
+if ($LASTEXITCODE -ne 0) {
+    throw "Las pruebas fallaron. La aplicacion no se iniciara."
+}
+
+Write-Host "Pruebas correctas." -ForegroundColor Green
 Write-Host "Iniciando la aplicacion visual..." -ForegroundColor Cyan
 & $python.Source -m application.visual
 if ($LASTEXITCODE -ne 0) {
