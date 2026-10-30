@@ -1,0 +1,694 @@
+{
+  "torneos": [
+    {
+      "nombre": "Demo 1",
+      "anho": 2026,
+      "puntuacion": 800.0,
+      "participantes": [
+        {
+          "seed": 2,
+          "jugador": "DemoJugador5"
+        },
+        {
+          "seed": 1,
+          "jugador": "DemoJugador18"
+        },
+        {
+          "seed": 5,
+          "jugador": "DemoJugador7"
+        },
+        {
+          "seed": 6,
+          "jugador": "DemoJugador16"
+        },
+        {
+          "seed": 8,
+          "jugador": "DemoJugador9"
+        },
+        {
+          "seed": 3,
+          "jugador": "DemoJugador24"
+        },
+        {
+          "seed": 4,
+          "jugador": "DemoJugador11"
+        },
+        {
+          "seed": 11,
+          "jugador": "DemoJugador6"
+        },
+        {
+          "seed": 9,
+          "jugador": "DemoJugador8"
+        },
+        {
+          "seed": 7,
+          "jugador": "DemoJugador20"
+        },
+        {
+          "seed": 12,
+          "jugador": "DemoJugador13"
+        },
+        {
+          "seed": 10,
+          "jugador": "DemoJugador10"
+        },
+        {
+          "seed": 14,
+          "jugador": "DemoJugador22"
+        },
+        {
+          "seed": 15,
+          "jugador": "DemoJugador17"
+        },
+        {
+          "seed": 16,
+          "jugador": "DemoJugador12"
+        },
+        {
+          "seed": 13,
+          "jugador": "DemoJugador14"
+        }
+      ]
+    },
+    {
+      "nombre": "Demo 2",
+      "anho": 2026,
+      "puntuacion": 1150.0,
+      "participantes": [
+        {
+          "seed": 2,
+          "jugador": "DemoJugador6"
+        },
+        {
+          "seed": 1,
+          "jugador": "DemoJugador14"
+        },
+        {
+          "seed": 4,
+          "jugador": "DemoJugador9"
+        },
+        {
+          "seed": 3,
+          "jugador": "DemoJugador10"
+        },
+        {
+          "seed": 6,
+          "jugador": "DemoJugador4"
+        },
+        {
+          "seed": 9,
+          "jugador": "DemoJugador19"
+        },
+        {
+          "seed": 7,
+          "jugador": "DemoJugador5"
+        },
+        {
+          "seed": 12,
+          "jugador": "DemoJugador16"
+        },
+        {
+          "seed": 5,
+          "jugador": "DemoJugador13"
+        },
+        {
+          "seed": 8,
+          "jugador": "DemoJugador2"
+        },
+        {
+          "seed": 11,
+          "jugador": "DemoJugador23"
+        },
+        {
+          "seed": 13,
+          "jugador": "DemoJugador8"
+        },
+        {
+          "seed": 10,
+          "jugador": "DemoJugador22"
+        },
+        {
+          "seed": 15,
+          "jugador": "DemoJugador18"
+        },
+        {
+          "seed": 14,
+          "jugador": "DemoJugador12"
+        },
+        {
+          "seed": 17,
+          "jugador": "DemoJugador20"
+        },
+        {
+          "seed": 16,
+          "jugador": "DemoJugador11"
+        }
+      ]
+    },
+    {
+      "nombre": "Demo 3",
+      "anho": 2026,
+      "puntuacion": 1500.0,
+      "participantes": [
+        {
+          "seed": 1,
+          "jugador": "DemoJugador5"
+        },
+        {
+          "seed": 3,
+          "jugador": "DemoJugador4"
+        },
+        {
+          "seed": 2,
+          "jugador": "DemoJugador6"
+        },
+        {
+          "seed": 6,
+          "jugador": "DemoJugador7"
+        },
+        {
+          "seed": 7,
+          "jugador": "DemoJugador18"
+        },
+        {
+          "seed": 9,
+          "jugador": "DemoJugador9"
+        },
+        {
+          "seed": 4,
+          "jugador": "DemoJugador23"
+        },
+        {
+          "seed": 5,
+          "jugador": "DemoJugador17"
+        },
+        {
+          "seed": 10,
+          "jugador": "DemoJugador14"
+        },
+        {
+          "seed": 8,
+          "jugador": "DemoJugador20"
+        },
+        {
+          "seed": 12,
+          "jugador": "DemoJugador10"
+        },
+        {
+          "seed": 11,
+          "jugador": "DemoJugador3"
+        },
+        {
+          "seed": 15,
+          "jugador": "DemoJugador1"
+        },
+        {
+          "seed": 16,
+          "jugador": "DemoJugador22"
+        },
+        {
+          "seed": 13,
+          "jugador": "DemoJugador8"
+        },
+        {
+          "seed": 14,
+          "jugador": "DemoJugador21"
+        },
+        {
+          "seed": 18,
+          "jugador": "DemoJugador11"
+        },
+        {
+          "seed": 17,
+          "jugador": "DemoJugador24"
+        }
+      ]
+    },
+    {
+      "nombre": "Demo 4",
+      "anho": 2026,
+      "puntuacion": 1850.0,
+      "participantes": [
+        {
+          "seed": 3,
+          "jugador": "DemoJugador13"
+        },
+        {
+          "seed": 6,
+          "jugador": "DemoJugador6"
+        },
+        {
+          "seed": 4,
+          "jugador": "DemoJugador21"
+        },
+        {
+          "seed": 2,
+          "jugador": "DemoJugador1"
+        },
+        {
+          "seed": 1,
+          "jugador": "DemoJugador19"
+        },
+        {
+          "seed": 5,
+          "jugador": "DemoJugador14"
+        },
+        {
+          "seed": 9,
+          "jugador": "DemoJugador12"
+        },
+        {
+          "seed": 7,
+          "jugador": "DemoJugador9"
+        },
+        {
+          "seed": 8,
+          "jugador": "DemoJugador18"
+        },
+        {
+          "seed": 14,
+          "jugador": "DemoJugador20"
+        },
+        {
+          "seed": 16,
+          "jugador": "DemoJugador15"
+        },
+        {
+          "seed": 10,
+          "jugador": "DemoJugador4"
+        },
+        {
+          "seed": 15,
+          "jugador": "DemoJugador22"
+        },
+        {
+          "seed": 13,
+          "jugador": "DemoJugador5"
+        },
+        {
+          "seed": 11,
+          "jugador": "DemoJugador7"
+        },
+        {
+          "seed": 12,
+          "jugador": "DemoJugador16"
+        },
+        {
+          "seed": 17,
+          "jugador": "DemoJugador23"
+        },
+        {
+          "seed": 18,
+          "jugador": "DemoJugador11"
+        },
+        {
+          "seed": 19,
+          "jugador": "DemoJugador3"
+        }
+      ]
+    },
+    {
+      "nombre": "Demo 1",
+      "anho": 2026,
+      "puntuacion": 800.0,
+      "participantes": [
+        {
+          "seed": 2,
+          "jugador": "DemoJugador5"
+        },
+        {
+          "seed": 1,
+          "jugador": "DemoJugador18"
+        },
+        {
+          "seed": 5,
+          "jugador": "DemoJugador7"
+        },
+        {
+          "seed": 6,
+          "jugador": "DemoJugador16"
+        },
+        {
+          "seed": 8,
+          "jugador": "DemoJugador9"
+        },
+        {
+          "seed": 3,
+          "jugador": "DemoJugador24"
+        },
+        {
+          "seed": 4,
+          "jugador": "DemoJugador11"
+        },
+        {
+          "seed": 11,
+          "jugador": "DemoJugador6"
+        },
+        {
+          "seed": 9,
+          "jugador": "DemoJugador8"
+        },
+        {
+          "seed": 7,
+          "jugador": "DemoJugador20"
+        },
+        {
+          "seed": 12,
+          "jugador": "DemoJugador13"
+        },
+        {
+          "seed": 10,
+          "jugador": "DemoJugador10"
+        },
+        {
+          "seed": 14,
+          "jugador": "DemoJugador22"
+        },
+        {
+          "seed": 15,
+          "jugador": "DemoJugador17"
+        },
+        {
+          "seed": 16,
+          "jugador": "DemoJugador12"
+        },
+        {
+          "seed": 13,
+          "jugador": "DemoJugador14"
+        }
+      ]
+    },
+    {
+      "nombre": "Demo 2",
+      "anho": 2026,
+      "puntuacion": 1150.0,
+      "participantes": [
+        {
+          "seed": 2,
+          "jugador": "DemoJugador6"
+        },
+        {
+          "seed": 1,
+          "jugador": "DemoJugador14"
+        },
+        {
+          "seed": 4,
+          "jugador": "DemoJugador9"
+        },
+        {
+          "seed": 3,
+          "jugador": "DemoJugador10"
+        },
+        {
+          "seed": 6,
+          "jugador": "DemoJugador4"
+        },
+        {
+          "seed": 9,
+          "jugador": "DemoJugador19"
+        },
+        {
+          "seed": 7,
+          "jugador": "DemoJugador5"
+        },
+        {
+          "seed": 12,
+          "jugador": "DemoJugador16"
+        },
+        {
+          "seed": 5,
+          "jugador": "DemoJugador13"
+        },
+        {
+          "seed": 8,
+          "jugador": "DemoJugador2"
+        },
+        {
+          "seed": 11,
+          "jugador": "DemoJugador23"
+        },
+        {
+          "seed": 13,
+          "jugador": "DemoJugador8"
+        },
+        {
+          "seed": 10,
+          "jugador": "DemoJugador22"
+        },
+        {
+          "seed": 15,
+          "jugador": "DemoJugador18"
+        },
+        {
+          "seed": 14,
+          "jugador": "DemoJugador12"
+        },
+        {
+          "seed": 17,
+          "jugador": "DemoJugador20"
+        },
+        {
+          "seed": 16,
+          "jugador": "DemoJugador11"
+        }
+      ]
+    },
+    {
+      "nombre": "Demo 3",
+      "anho": 2026,
+      "puntuacion": 1500.0,
+      "participantes": [
+        {
+          "seed": 1,
+          "jugador": "DemoJugador5"
+        },
+        {
+          "seed": 3,
+          "jugador": "DemoJugador4"
+        },
+        {
+          "seed": 2,
+          "jugador": "DemoJugador6"
+        },
+        {
+          "seed": 6,
+          "jugador": "DemoJugador7"
+        },
+        {
+          "seed": 7,
+          "jugador": "DemoJugador18"
+        },
+        {
+          "seed": 9,
+          "jugador": "DemoJugador9"
+        },
+        {
+          "seed": 4,
+          "jugador": "DemoJugador23"
+        },
+        {
+          "seed": 5,
+          "jugador": "DemoJugador17"
+        },
+        {
+          "seed": 10,
+          "jugador": "DemoJugador14"
+        },
+        {
+          "seed": 8,
+          "jugador": "DemoJugador20"
+        },
+        {
+          "seed": 12,
+          "jugador": "DemoJugador10"
+        },
+        {
+          "seed": 11,
+          "jugador": "DemoJugador3"
+        },
+        {
+          "seed": 15,
+          "jugador": "DemoJugador1"
+        },
+        {
+          "seed": 16,
+          "jugador": "DemoJugador22"
+        },
+        {
+          "seed": 13,
+          "jugador": "DemoJugador8"
+        },
+        {
+          "seed": 14,
+          "jugador": "DemoJugador21"
+        },
+        {
+          "seed": 18,
+          "jugador": "DemoJugador11"
+        },
+        {
+          "seed": 17,
+          "jugador": "DemoJugador24"
+        }
+      ]
+    },
+    {
+      "nombre": "Demo 4",
+      "anho": 2026,
+      "puntuacion": 1850.0,
+      "participantes": [
+        {
+          "seed": 3,
+          "jugador": "DemoJugador13"
+        },
+        {
+          "seed": 6,
+          "jugador": "DemoJugador6"
+        },
+        {
+          "seed": 4,
+          "jugador": "DemoJugador21"
+        },
+        {
+          "seed": 2,
+          "jugador": "DemoJugador1"
+        },
+        {
+          "seed": 1,
+          "jugador": "DemoJugador19"
+        },
+        {
+          "seed": 5,
+          "jugador": "DemoJugador14"
+        },
+        {
+          "seed": 9,
+          "jugador": "DemoJugador12"
+        },
+        {
+          "seed": 7,
+          "jugador": "DemoJugador9"
+        },
+        {
+          "seed": 8,
+          "jugador": "DemoJugador18"
+        },
+        {
+          "seed": 14,
+          "jugador": "DemoJugador20"
+        },
+        {
+          "seed": 16,
+          "jugador": "DemoJugador15"
+        },
+        {
+          "seed": 10,
+          "jugador": "DemoJugador4"
+        },
+        {
+          "seed": 15,
+          "jugador": "DemoJugador22"
+        },
+        {
+          "seed": 13,
+          "jugador": "DemoJugador5"
+        },
+        {
+          "seed": 11,
+          "jugador": "DemoJugador7"
+        },
+        {
+          "seed": 12,
+          "jugador": "DemoJugador16"
+        },
+        {
+          "seed": 17,
+          "jugador": "DemoJugador23"
+        },
+        {
+          "seed": 18,
+          "jugador": "DemoJugador11"
+        },
+        {
+          "seed": 19,
+          "jugador": "DemoJugador3"
+        }
+      ]
+    }
+  ],
+  "ranking_Todos": [
+    {
+      "jugador": "DemoJugador6",
+      "puntuacion": 1.0
+    },
+    {
+      "jugador": "DemoJugador5",
+      "puntuacion": 0.8141701534170154
+    },
+    {
+      "jugador": "DemoJugador13",
+      "puntuacion": 0.6422594142259415
+    },
+    {
+      "jugador": "DemoJugador9",
+      "puntuacion": 0.4643886564388656
+    },
+    {
+      "jugador": "DemoJugador4",
+      "puntuacion": 0.3704602510460251
+    },
+    {
+      "jugador": "DemoJugador7",
+      "puntuacion": 0.30476057647605764
+    },
+    {
+      "jugador": "DemoJugador18",
+      "puntuacion": 0.26298465829846585
+    },
+    {
+      "jugador": "DemoJugador14",
+      "puntuacion": 0.2602603440260344
+    },
+    {
+      "jugador": "DemoJugador16",
+      "puntuacion": 0.2516875871687587
+    },
+    {
+      "jugador": "DemoJugador21",
+      "puntuacion": 0.2369502556950256
+    },
+    {
+      "jugador": "DemoJugador19",
+      "puntuacion": 0.17976754997675498
+    },
+    {
+      "jugador": "DemoJugador12",
+      "puntuacion": 0.14686192468619247
+    },
+    {
+      "jugador": "DemoJugador1",
+      "puntuacion": 0.1287866108786611
+    },
+    {
+      "jugador": "DemoJugador10",
+      "puntuacion": 0.09411436541143656
+    },
+    {
+      "jugador": "DemoJugador23",
+      "puntuacion": 0.031241283124128306
+    },
+    {
+      "jugador": "DemoJugador17",
+      "puntuacion": 0.02287308228730823
+    },
+    {
+      "jugador": "DemoJugador24",
+      "puntuacion": 0.005950720595072061
+    },
+    {
+      "jugador": "DemoJugador11",
+      "puntuacion": 0.0
+    }
+  ]
+}
